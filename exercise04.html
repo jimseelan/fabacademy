@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+    <h1>Electronics Production</h1>
+       <p> <img src="images/week4/jimsolder.JPG" width=60% height=auto>
+		<legend>Its me soldering my first ever board, that too using SMD components :)</legend>         </p>
+     <p>This week, we are learning to do some basic electronics production, specifically creation of a PCB by milling, then stuffing the components and finally burning the code to it. This is something which I have never attempted before. As part of the assignments this week we need to make an in-circuit programmer (FabISP) by milling the PCB. The FabISP is an in-system programmer for AVR microcontrollers, designed for production within a FabLab. It allows us to program the microcontrollers on other boards we make in our coming weeks activities. We have chosen the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">FabTinyISP Minimal version</a> which uses a <a href="http://www.atmel.com/images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf">ATtiny45</a>.</p>   
+        
+<h2>PCB</h2>
+       <p>A printed circuit board (<a href="https://en.wikipedia.org/wiki/Printed_circuit_board">PCB</a>)  mechanically supports and electrically connects electronic components using conductive tracks, pads and other features etched/milled from copper sheets laminated onto a non-conductive substrate. A basic building block of the PCB is an <a href="https://en.wikipedia.org/wiki/FR-4">FR-4</a> panel with a thin layer of copper foil laminated to one or both sides.There are multiple ways of <a href="https://technick.net/guides/electronics/pcb/">making the PCB.</a> The most common techniques being etching and milling.</p>
+        <p>There are two ways of mounting the parts to the PCB. The <strong>Trough Hole Mounting:</strong>mounting technique involves different components which have lead wires that are led to the board through holes, hence the name. And in Surface Mount Technology(SMT), the leads are soldered on PCB surface directly rather than using hole mounting</p>
+        <p>There are two ways of mounting the parts to the PCB. The <strong>Trough Hole Mounting:</strong>mounting technique involves different components which have lead wires that are led to the board through holes, hence the name. And in Surface Mount Technology(SMT), the leads are soldered on PCB surface directly rather than using hole mounting</p>
+        
+<h2>PCB Milling</h2>
+        <p>In the lab we use PCB milling which is much quicker and less messier for protyping boards. We need the following tools for milling the PCB</p>
+        <li><a href="http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=mdx-20">Roland MDX-20 Mill</a></li>
+        <li>Single/Dual Sided <a href="https://www.google.co.in/search?q=Copper+Clad+Circuit+PCB+Board">Copper Clad Circuit PCB Board</a></li>
+        <li>Double sided tape</li>
+        <li>1/64, 1/32 Milling bits</li>
+        <li>A PC with fabmodules up and running.</li>
+        
+<h3>The modela MDX-20 mill</h3>
+        <p>The MDX-20 could be used to mill the traces, we should ensure that the mill is be ing attended while in operation, and also need to be aware of the small flying debris while the machine is in operation. The  key controls of the machine are 
+            <li>The Green power button, well controls the power.</li>
+            <li>View, moves the cutting head away and the base plate towards you so that you can place/see your cutting surface.</li>
+            <li>Tool Up, moves the cutting head up.</li>
+            <li>Tool Down, moves the cutting head down.</li></p>
+       <p> <img src="images/week4/modela.jpg" width=60% height=auto>
+		<legend>Modela MDX-20</legend>         </p>
+        
+<h3>Sacrificial Layer</h3>
+        <p>We need a sacrificial layer here because in case something goes wrong and the milling bit goes further than expected, we might just end up damaging the base plate. The sacrificial layer as the name suggests sacrifices itself for saving the base plate from any damage.To do this we apply the dual sided tape onto a copper clad board, about the same or of greater size to that of the plate we are going to mill.
+        <img src="images/week4/sacrificiallayer.jpg" width=60% height=auto>
+		<legend>Sacrificial Layer</legend> </p>
+        
+<h3>Setting the PCB</h3>
+        <p>A PCB board of suitable size could be fixed on the sacrficial layer using double side tape. Care should be taken to evenly place the board, as any variations may cause cutting tool breakage. If the milling surface is not level then need to apply pressure gently on the raised areas, if that doesn’t work we need to redo the adhesive part, making sure that its level and uniformly distributed.
+        <img src="images/week4/stickpcb1.jpg" width=60% height=auto>
+		<legend>Sticking the milling surface</legend> </p>
+        
+<h3>Attaching the milling bit</h3>
+        <p>First we need to raise the milling head by using the ‘Tool-UP’ button on the Modela control panel. Using the Allen key, gently loosen the hex nut on the rotating part on the milling head, and gently remove the existing bit. Depending on the type of cut we need to select from 2 available bits. 1/64 for the traces and 1/32 for the border cut. While storing, we need to ensure that the bits should be placed in its appropriate container with the cap on. It is also a good idea to place a sponge(soft cloth) beneath the tool holder to ensure that the bit is not damage in case it falls while being removed.
+        <img src="images/week4/modelatighting.jpg" width=60% height=auto>
+		<legend>Using the allen key to attach/remove bits</legend> </p>            
+        
+ <h3>Fab modules - The software interface to milling</h3>
+        <p>There are two ways we could use this milling machine, either by using the offline ‘fab’ package, or the online <a href="http://fabmodules.org/">fabmodules</a>. In our lab, we have used the offline fab package for this assignment. The fab module could be launched by typing <code>fab</code> on the Ubunu Terminal. Then we need to chose PNG and modela MDX-20 as shown below.
+         <img src="images/week4/fabmodule.gif" width=60% height=auto>
+		<legend>Selecting the options on fab module</legend> </p>  
+         <p>The board layout, need to be available as an image (.png) file, having black and white coloring. The black portion of the board is removed by the miller and the white portion remains as the circuit trace. The layout used for this assignments are available <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">here</a>.
+         <img src="images/week4/fts_mini_traces.png" width=60% height=auto>
+		<legend>Image to mill the traces (using 1/64 nit)</legend>
+        <img src="images/week4/tracemillonfab.png" width=60% height=auto>
+		<legend>image for the final profile cut (using 1/32 bit)</legend> </p>
+        
+<h3>Setting the orgin</h3>
+        <p>We need to set the origin so that the machine knows from where it should start the operation. This is also vital in order to select the desired area on the copper board on which to mill the PCB. First we need to select the ‘move to xmin, ymin’ option. This would move the milling head to the Zero (20,20 by default). Then by changing the values we could locate the orgin to the desired area. In my assignment, I shifted the orgin to (2,79), so as to mill on the available space at the top left corner. Then move the milling head down by using the ‘Tool-Down’ button on the front panel, till we reach about 0.5 cms above the milling surface. Now with the Allen key, gently loosen the hex-nut holding the bit such that the bit drops to the milling surface. Then fasten the nut. Now the milling bit should be resting just on the top of the milling surface, as seen in the image.
+        <img src="images/week4/stickthepcb2.jpg" width=60% height=auto>
+        <legend>Setting the orgin on a freshly sticked board</legend> </p>
+        
+<h3>Milling the board</h3>
+        <p>Select the ‘PCB traces’ option under the ‘process’ drop down. Adjust the cut depth to 0.1mm, which will mill away the copper. Then select the ‘calculate’ option.This will generate the tool path for the device.Go through the tool paths and see if all traces are available. It is interesting to note that if we give -1 as the offset value, then all the copper except the traces will be removed. Finally click the ‘send’ button to send the tool path to the device. And it will start cutting. A status window will be displayed, showing the time elapsed and remaining, and mine took about 10mins to mill the traces.
+        <img src="images/week4/millingstatus.png" width=60% height=auto>
+        <legend>Status screen showing the milling progress</legend> 
+        Vacuum the surface and then closely observe the traces and note the surface for any incomplete cuts. 
+        <img src="images/week4/vacuum.jpg" width=60% height=auto>
+        <legend>Status screen showing the milling progress</legend> 
+        <img src="images/week4/milling.gif" width=50% height=auto>
+        <legend>Status screen showing the milling progress</legend> 
+        If so redo the entire traces with a little more cut depth. Once the traces are ready, replace the bit with the 1/32 bit and repeat the same process with the border for cutting the board out. Be sure to use the ‘Cut out board’ option in the process dropdown. We have to use another .png file that looks like the one below to do the border cutting.
+        <img src="images/week4/fts_mini_cut.png" width=60% height=auto>
+		<legend>image for the final profile cut (using 1/32 bit)</legend>
+        Once this cutting is finished, we can remove the cut board from the mill.
+        <img src="images/week4/milledboard.jpg" width=60% height=auto>
+		<legend>The board I milled, in fact the first PCB I made</legend>  </p>
+
+<h2>Stuffing and Soldering</h2>
+        <p> <img src="images/week4/pcb_full.png" width=60% height=auto>
+		<legend>The part placement diagram</legend>  </p>
+        <p>Once the board is milled the next task is stuff the boards with the parts. This could be done in the following steps. 
+        <li>Identify the parts that goes into the board</li>
+        <li>Place them in a markable tray/sheet</li>
+        <li>Solder them to the board</li></p>
+        
+       <p> <img src="images/week4/tray.jpg" width=auto height=25%>
+		<legend>The parts required for the fabTinyISP on the tray</legend></p>
+      <p>The fabTinyISP needs the following parts:
+            <li>1x ATtiny45 or ATtiny85
+            <li>2x 1kΩ resistors</li>
+            <li>2x 499Ω resistors</li>
+            <li>2x 49Ω resistors</li>
+            <li>2x 3.3v zener diodes</li>
+            <li>1x red LED</li>
+            <li>1x green LED</li>
+            <li>1x 100nF capacitor</li>
+            <li>1x 2x3 pin header</li></p>
+        <p> <img src="images/week4/itemssorting.jpg" width=60% height=auto>
+        <legend>The diagram and the parts tray used for soldering</legend> </p> 
+      
+      <p>It is important to note the orientation of the parts,
+
+<li>The zener diodes are marked, both in the drawing and on the packages, with a line on the cathode side.</li>
+<li>The LED cathodes on the PCB drawing are marked with dots and thicker lines. The one in our lab has a green line visible on the cathode side of the epoxy lens. </li>
+<li>The ATtiny45 marks pin 1 with a dot laser-etched into the corner of the package. Pin 1 is marked in the drawing with a dot as well. This should be pointing to bottom left when the USB is on the left side.</li>
+       And its better to start soldering with the ATtiny45 as it will be more accessible when other parts not around. Once the parts are all soldered in then need to use solder to create a bridge on the jumper near the ISP header (J1). This temporarily connects VCC to the Vprog pin on the ISP header so that the header can be used to program the tiny45.</p>
+        <p> <img src="images/week4/finalpcb.jpg" width=60% height=auto>
+        <legend>The fabISP - after soldering the parts</legend> </p> 
+    <p>Once the soldering is done, we need to inspect it against the schematic and PCB layout image, and also check if the parts are all placed correctly and connection are soldered properly.</p>
+    
+<h2>Programming the board</h2>
+<p>First we need to setup the enviorment. We used AVRDUDE, which is a utility to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP). For setting up the following command is entered on the terminal on Ubuntu.</p>
+<code>sudo apt install avrdude gcc-avr avr-libc make</code><br>
+    <p>Then we need to download the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip">firmware source code</a> and extract and cd that path on a terminal window. Then we need to Run <code>make</code>. This will build the hex file that will get programmed onto the ATtiny45. When the command completes, we should have a file called fts_firmware.hex.</p>
+                <p> <img src="images/week4/testing.jpg" width=60% height=auto>
+        <legend>Connecting to another fabISP for programming</legend> </p> 
+    <p>Then we need to connect another programmer, I have used the fabISP made by Ajith in our lab, to load the program to my fabISP. The Red LED will glow now. It should be noted that the boards are oriented in the same direction. Then we need to enter <code>make flash</code> on the terminal. This will erase the target chip, and program its flash memory with the contents of the .hex file we built before. We should see several progress bars while avrdude erases, programs, and verifies the chip.</p>
+    <p>After flashing we need  to set the configuration fuses, which is done by entering <code>make fuses</code> on the terminal. This will set up all of the fuses except the one that disables the reset pin. Next we need to check the USB connectivity. This is done by typing <code>lsusb</code> in the terminal, which will list USB devices. And if we should see a "Multiple Vendors USBtiny" device, it worked correctly, and it did work for me right first time itself.</p>
+    <p>Now there are two final steps left to turn your board into a programmer that can program other boards. First, we need to change the bit that will turn the ATtiny45's reset pin into a GPIO pin. Once again, this will disable our ability to reprogram this ATtiny45 in the future, which is why we wanted to make sure everything was working before doing this. Connect the ISP programmer to the board one more time, and run <code>make rstdisbl</code>. This does the same thing as the <code>make fuses</code> command, but this time it's going to include that reset disable bit as well. We should see some progress bars, and with that, avrdude will never be able to talk to this chip again through the ISP header. And it has begun its life as a programmer alone.</p>
+ <p> Following are the commands and the progress messages I got on my terminal while programming my fabISP. </p>
+<!---<p style="align:center;border:3px; border-style:none; width:500px;background-color:gray"><b>jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1</b>
+ <embed src="/images/week4/terminalcommands.txt" style="width:500px;height:300px;background-color:gray;border:solid black;padding:1%;font:22px/30px sans-serif;">
+    </p>--->        
+                <p style="align:center;border:3px; border-style:solid; width:500px;background-color:gray"><mark style="background-color: #660475;" <strong> &nbsp X &nbsp - &nbsp [ ] &nbsp&nbsp <b>jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1</b>&nbsp</strong></mark>
+        <object tyle="align:center;border:3px; border-style:none; width:500px;background-color:#300325" data="images/week4/terminalcommands.txt" type="text/plain"
+width="500" style="height: 300px">
+<a href="images/week4/terminalcommands.txt">No Support?</a>
+</object>
+                        <p> <img src="images/week4/lsusb.png" width=60% height=auto>
+        <legend><code>lsusb</code> showing that USBtiny is detected</legend> </p> 
+<h3>Making the bus connector</h3>   
+    <p>A bus connector is required to connect the headers of the fabISP to another boardfor programming. This is made by taking a 1 foot long 6-strand ribbon wire and then snapping the 2 piece connector as shown in the animation below.</p>
+                <p> <img src="images/week4/connector.gif" width=500px height=auto>
+        <legend>Making female IDC ribbon connector</legend> </p> 
+        
+    <p>This weeks tasks were entirely new to me, evenhough I had some initial doubts on my ability to do the tasks like soldering, programming and all, I was able to complete all the tasks in time with good understanding. Thanks to the support by Yadu, Vishnu and Ajith, who enable me to be a proud owner of my first self made board, that too using surface mount parts.</p>
+        <hr>
+
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

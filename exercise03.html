@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+        <h2>Computer Controlled cutting</h2>
+   <p>This weeks assignment was to design, make and document a parametric press fit kit, accounting for the laser cutting kef that could be aseembled in multiple ways. Also as a group project we need to find the kerf by parametrically varying slot dimensions. And also to cut something von the vinyl cutter.   </p>
+        
+        <p>       <img src="images/week3/track1.jpg" width=80% height=auto>
+		<legend>Tracks kit made cardboard</legend> </p>
+       
+        <h3>Laser Cutting</h3>
+        
+        <p>In our lab, we have a Trotec speedy 100, having a Carbon dioxide(CO2 ) laser, and has as work area of 600mmx300mm. We could have any vector files, say like svg, dxf to cut the profiles using this laser cutter. Also we could configure the printer in such a way that we could do engraving also by varying the power. The easiest way to achieve is to have red colour for through cute, and varying scales of black for different depths. I have expirimented using cardboard, vinyl and craftwood. The pressfit assignment was done using cardboard. Engraving/Etching on craft wood gave realistic results. If we need to do etching on acryillic then we need to invert the imagecolours first before converting to grayscale and then print.</p>
+        
+        <p>       <img src="images/week3/LCCapture1.PNG" width=80% height=auto>
+		<legend>Changing parameters on Printer settings</legend>         
+        
+        <img src="images/week3/LCCapture3.PNG" width=80% height=auto>
+		<legend>Positioning on the print plate</legend>             
+        
+        <img src="images/week3/LC1.jpg" width=80% height=auto>
+		<legend>Levelling of the laser head</legend> 
+                            
+        <img src="images/week3/LC2.jpg" width=80% height=auto>
+		<legend>Engraved photo keychain</legend>    
+        </p>    
+
+                      <p>        <img src="images/week3/kerf.gif" width=60% height=auto>
+		<legend>Kerf, impacted by the width of laser and the material properties.</legend></p> 
+        
+        <p>        Also we studied about Kerf which is important when we make press fit connections using slots. The laser burns away a portion of material when it cuts through. This is known as the laser kerf and ranges from 0.08mm – 1mm depending on the material type and other conditional factors. Kerf is determined by material properties and thickness. But other factors also have an impact on how much the laser takes away like the focal length of the lens, pressure of compressed air both have an impact. Kerf widths can vary even on the same material sheet, whether cutting a straight line or a curve line or from laser cutting in the x or Y dimension. The manufacturing tolerance of the material can also impact the kerf. For some applications (for example a slot together product), we will need to account for the kerf within our drawing by adding or subtracting the kerf width from your component dimensions. With some experiments, we found that the kerf allowance that needs to be given for cardboard in our lab is 0.25 on each cut edge. This value was further used in my press fit assembly as a variable in Solidworks, which could be changed later based on different material. </p>
+ 
+        <p>For Finding the Kerf of our machine we have made a kerf gig, which is having a small square of 10mm inner dimension. The Sketch of our gig is shown below, we also gave some engraving lines as measuring reference</p>
+        
+        <p>        <img src="images/week3/kerfgig.png" width=40% height=40%>
+		<legend>The profile used for checking kerf</legend>
+        <img src="images/week3/kerfwood.png" width=40% height=40%>
+		<legend>The profile cut on craft wood for checking kerf</legend>
+        </p>
+        <p>We can see there is a gap in between the cuts, it is due to the kerf of laser. We measured the inner and outer measurements of the gig,inner and outer rectangle dimensions measured,taken the average value of the readings and we got the total kerf as 0.65 this accounts the kerf of two sides of the rectangle the actual value of the kerf is half of this value. The calculated value of Kerf is 0.65/2= <strong>0.325mm</strong></p>
+        <p>        <img src="images/week3/kerfacr.png" width=40% height=40%>
+            <legend>The profile cut on 3mm acryllic for checking kerf</legend></p>
+        </p>Next we did the same thing on acrylic of 3mm thickness and repeated the same measurements and calculated the value of kerf. Here we got the total kerf as 0.488 ans the actual Kerf value is half of the total 0.488/2=<strong>0.244mm</strong><p>
+        
+      <p>We need to account for the kerf within our drawing by adding or subtracting the kerf width from our part dimensions. </p>
+
+<p>Next we made a gig for checking kerf for craft plywood. So we made a small gig which is having different dimensional slots starting from 2.9mm for 3.1mm craft wood and found that the 2.9mm (exact slot value with kerf correction)slot is best for the press fit. The frictional force is minimal in this case and yet giving proper fit. </p>
+              <p>        <img src="images/week3/slot.png" width=40% height=40%>
+		<legend>Slot profiles cut for checking kerf</legend></p>
+       
+      
+        <p>        <img src="images/week3/tablelasersettings.JPG" width=80% height=auto>
+		<legend>Settings for the laser cutting machine</legend></p>
+       
+<hr>
+  
+    <h3>The track playing set - A Parametric Press Fit</h3>    
+        <p>As part of the assignment we need to make a pressfit assembly kit. I thought to make some thing with an application, and finalised to create a track assembly kit as my assignment, as my son is very interested to play with toys cars, trains and tracks. And this is one toy next to the building blocks one could think of multiple configurations, and still find some use. I thought to make a low cost version of these tracks. As our lab is not having any stock of craftwood, the design was made for cardboard. I modelled the various segments using solidworks. </p>
+        
+        <p>        <img src="images/week3/swfiles.PNG" width=80% height=auto>
+		<legend>Track segments and parts created using Solidworks</legend>   
+        </p>        
+        
+        <p>        <img src="images/week3/swfiles.gif" width=80% height=auto>
+		<legend>Track segments and parts created using Solidworks</legend>   
+        </p>  
+                
+        <p>To ensure parametricity and ease of editing to change dimensions, I have used few global variables in solidworks. I also did a test assembly on solidworks to see if everything comes together correctly.</p>
+        <p>        
+        <img src="images/week3/swvariablesnew.PNG" width=80% height=auto>
+		<legend>Variables used in Solidworks</legend>    </p>     
+        
+        <p>Once the models are made, I created DXF files from solidworks, suing file>saveas>DXF, and by selecting the face to export the edges. </p>
+
+        <p> <img src="images/week3/swconverttodxf.gif" width=80% height=auto>
+		<legend>Converting the solidworks files to DXF</legend> </p>
+        
+        <p>Then the DXF files are imported to Rhino, and they are converted to rhino compatible entities using <code>make2D</code> and then <codee>join</codee> to join the nodes of any disconnected entities.</p>
+        
+        <p>  <img src="images/week3/rhinoprocessdxf.gif" width=80% height=auto>
+		<legend>Post processing the DXF in Rhino</legend>         </p>
+        
+        <p>Then the various segments are grouped together in 600x300 rectangles, so that those can be easily transferred to the laser cutter.</p>
+        
+         <p>  <img src="images/week3/rhinonesting.PNG" width=80% height=auto>
+		<legend>Nesting of the tracks in Rhino</legend>         </p>
+        
+        <p>Then the tracks and the various segments are printed on 600x300 cardboard sheets, and assembled in various configurations, to test the proper alignment and fit.</p>
+        
+       <p>  <img src="images/week3/LC3.jpg" width=80% height=auto>
+		<legend>Cutting of tracks</legend>         </p>
+        
+       <p>  <img src="images/week3/LC5.jpg" width=80% height=auto>
+		<legend>Removing the cut tracks</legend>         </p>
+
+        <p>  <img src="images/week3/LC6.jpg" width=80% height=auto>
+		<legend>Tracks removed </legend>         </p>
+        
+        <p>  <img src="images/week3/LC8.jpg" width=80% height=auto>
+		<legend>Test assembly at the lab</legend>         </p>          
+        
+        <p>  <img src="images/week3/LC7.jpg" width=80% height=auto>
+		<legend>Checking the various dimensions</legend>         </p>  
+        
+        <p>After testing the initial parts for alighnment and fits, few fine tuning of the equations are done in solidworks to ensure proper fit. The major change was made in the redegn of the male and female connectors as shown in the diagrams below.</p>
+
+         <p>  <img src="images/week3/SWoldconnector.PNG" width=80% height=auto>
+		<legend>The first version of the connector, note the distinct arrow shape</legend>         </p> 
+        
+         <p>  <img src="images/week3/SW2.PNG" width=80% height=auto>
+		<legend>Sketch of second version female connector</legend>         </p>         
+        
+        <p>  <img src="images/week3/SW1.PNG" width=80% height=auto>
+		<legend>Sketch of second version male connector</legend>         </p> 
+        
+        <p>  <img src="images/week3/swnew1.PNG" width=80% height=auto>
+		<legend>Revised sketch of female connector, to solve the fit issue</legend>         </p> 
+        
+        <p>  <img src="images/week3/swnew2.PNG" width=80% height=auto>
+		<legend>Revised sketch of male connector, to solve the fit issue</legend>         </p>         
+        
+        <p>Once the connectors are revised the tracks are cut again, and various versions were tried out.</p>
+        
+        <p>  <img src="images/week3/LC8.jpg" width=80% height=auto>
+		<legend>Trying out the various assembly options</legend>         </p>          
+        
+         <p>  <img src="images/week3/LC9.jpg" width=80% height=auto>
+		<legend>Amma... It's Play Time!</legend>         </p>  
+        
+         <p>  <img src="images/week3/LC10.jpg" width=80% height=auto>
+		<legend>Some unplanned configurations</legend>         </p>
+        
+                  <p>  <img src="images/week3/track1.jpg" width=80% height=auto>
+		<legend>The U turn and the junction that stops</legend>         </p>   
+        
+          <p>  <img src="images/week3/LC11.jpg" width=80% height=auto>
+		<legend>The climb and the over bridge</legend>         </p>       
+
+          <p>  <img src="images/week3/LC12.jpg" width=80% height=auto>
+		<legend>Vroom.. Vroom.. Vroom..</legend>         </p>          
+        <hr>
+        
+        <h3>Vinyl Cutting</h3>
+        <p>We have a Roland made Vinyle cutter in our lab. This cutter could be controlled using the fab modules. The input format for the vinyl cutter is PNG and we should ensure that the images are monochrome.Even gray scale will not make the cuts properly so the images should be made as black and white only. Photoshop, inkscape or any image editing software couldbe used tocreate the png files. (I have used inkscape). </p>
+
+
+        <p>  <img src="images/week3/Inkscape.PNG" width=80% height=auto>
+		<legend>Creating image using inkscape. Orginal SVG file <a href="images/week3/inscape_original_svg_smile.svg">here.</a> </legend>         </p>          
+        <p>After readying the image and checking it, we need to open the fab modules. This is done by entering <code>fab</code> on the terminal. We need toselect the input format as image(.png) and the output process as Roland Vinyl Cutter and click the make_png_camm button. </p>
+
+        <p>  <img src="images/week3/fabmodule.PNG" width=80% height=auto>
+		<legend>Fab module, showing the selection to be made for vinyl cutting.</legend>         </p>           
+        
+        <p>The image is then opened on the fab module, by clicking the load.png button . We could do resizing by clicking the invert.png button. </p>
+                
+<p>  <img src="images/week3/jim2.png" width=80% height=auto>
+		<legend>Fab module, showing the resizing.</legend>         </p> 
+        
+<p>Further the other values are also set as shown in the image, and we could click make.path. It is to be noted that giving a lower value will make the path more fine, but this may cause abrasions on the vinyl if the value is too low.</p>
+
+<p>
+
+  <img class="mySlides" src="images/week3/jim3.png" style="width:80%">
+  <img class="mySlides" src="images/week3/jim4.png" style="width:80%">
+
+
+  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+
+        
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+        <legend>Effect of error pixels. Click the arrows above for changing.</legend>    </p>
+        
+
+<p>The rollers on the machine should be kept within the white marks,. The lever on the rear could be disengaged to move the vinyl sheets. Using the control panel the piece or sheet can be selected and also the orgin could be set.</p>
+        
+        <p>  <img src="images/week3/vinylselect.jpg" width=auto height=30%>
+		<legend>Selection of piece or sheet via the machine interface. </legend>         </p>
+        
+        <p>  <img src="images/week3/vinylplace.jpg" width=80% height=auto>
+		<legend>Placement of vinyl piece, note the position of the rollers in white mark</legend>         </p>        
+
+        <p>  <img src="images/week3/vinylstick.jpg" width=80% height=auto>
+		<legend>The sticker is made, and is removed</legend>         </p>
+        
+        <p>  <img src="images/week3/vinyllaptop.jpg" width=80% height=auto>
+		<legend>The sticker is placed on the laptop. :-)</legend>         </p>
+        
+        <hr>
+        <!----<p>The original files created for this week is available <a <href="images/week3/Week3_files.zip"><strong>here</strong></a></p>----->
+      
+      <p>The files created for this week is available via the link below.</p>
+      <a href="images/week3/Week3_files.zip">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+        <hr>
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

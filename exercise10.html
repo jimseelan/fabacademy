@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+        <h1>OUTPUT DEVICES</h1>
+        <p>This week's assignment is to add an output device to a microcontroller board you've designed and program it to do something</p>
+        
+        <h2>My Plan</h2>
+        <p>My Plan for this week is to create a board with a RGB LED and a Switch. I also breaked out two unused pins and also two pins from the RGB LED for any future applications via headers. I have used ATTiny44 as my processor. And my idea is to simulate the RGB action by a program and also try to do some interaction with the provided switch. I also wanted my board to look good, so after few tryouts it replicated a mask, and a the RGB LED on the forehead and the switch on the chin.</p>
+        
+        <h3>Design of the Board</h3>
+        <p>I have used EAGLE to design my board. The Schematics and the the board drawings of the board is shown in images below. </p>
+                   
+        <p>       <img src="images/week10/eagleschiodevices.JPG" width=80% height=auto>
+		<legend>The schematics made using Autodesk Eagle</legend> </p> 
+        
+        <p>       <img src="images/week10/eaglebrdiodevices.JPG" width=80% height=auto>
+		<legend>The board designed using Autodesk Eagle</legend> </p> 
+        
+        <p>       <img src="images/week10/jimmill.png" width=80% height=auto>
+		<legend>The PNG file for milling the traces</legend> </p> 
+        
+        <p>       <img src="images/week10/jimprofile.png" width=80% height=auto>
+		<legend>The PNG file for cutting the outer profile</legend> </p>  
+        
+        <h3>Building and stuffing the board</h3>
+        
+        <p>The board is milled using the Modella at our lab, and the parts are soldered to it. </p>
+        
+        <p>       <img src="images/week10/milling.jpg" width=80% height=auto>
+		<legend>Milling in progress on the modella CNC milling machine</legend> </p>  
+        
+        <p>       <img src="images/week10/milledbrd.jpg" width=90% height=auto>
+		<legend>The milled board after removing the burrs</legend> </p>  
+        
+        <p>       <img src="images/week10/components.jpg" width=90% height=auto>
+		<legend>The components used for the board</legend> </p>          
+                
+        <p>       <img src="images/week10/finalboard.jpg" width=90% height=auto>
+		<legend>The board with all the components soldered</legend> </p> 
+        
+        <h2>The Code</h2>
+        <p>The code by <a href="http://academy.cba.mit.edu/classes/output_devices/RGB/hello.RGB.45.c">Neil</a> is used to test and the ports etc are changed. The code used to test the board is in the following codebox.  </p>
+        
+        <p>
+        <pre><code>
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+#define output(directions,pin) (directions |= pin) // set port direction for output
+#define set(port,pin) (port |= pin) // set port pin
+#define clear(port,pin) (port &= (~pin)) // clear port pin
+#define pin_test(pins,pin) (pins & pin) // test for port pin
+#define bit_test(byte,bit) (byte & (1 << bit)) // test for bit set
+#define PWM_delay() _delay_us(25) // PWM delay
+
+#define led_port PORTA
+#define led_direction DDRA
+#define red (1 << PA0)
+#define green (1 << PA1)
+#define blue (1 << PA2)
+
+int main(void) {
+   //
+   // main
+   //
+   unsigned char count, pwm;
+   //
+   // set clock divider to /1
+   //
+   CLKPR = (1 << CLKPCE);
+   CLKPR = (0 << CLKPS3) | (0 << CLKPS2) | (0 << CLKPS1) | (0 << CLKPS0);
+   //
+   // initialize LED pins
+   //
+   set(led_port, red);
+   output(led_direction, red);
+   set(led_port, green);
+   output(led_direction, green);
+   set(led_port, blue);
+   output(led_direction, blue);
+   //
+   // main loop
+   //
+   while (1) {
+      //
+      // off -> red
+      //
+      for (count = 0; count < 255; ++count) {
+         clear(led_port,red);
+         for (pwm = count; pwm < 255; ++pwm)
+            PWM_delay();
+         set(led_port,red);
+         for (pwm = 0; pwm < count; ++pwm)
+            PWM_delay();
+         }
+      //
+      // red -> green
+      //
+      for (count = 0; count < 255; ++count) {
+         set(led_port,red);
+         clear(led_port,green);
+         for (pwm = count; pwm < 255; ++pwm)
+            PWM_delay();
+         clear(led_port,red);
+         set(led_port,green);
+         for (pwm = 0; pwm < count; ++pwm)
+            PWM_delay();
+         }
+      //
+      // green -> blue
+      //
+      for (count = 0; count < 255; ++count) {
+         set(led_port,green);
+         clear(led_port,blue);
+         for (pwm = count; pwm < 255; ++pwm)
+            PWM_delay();
+         clear(led_port,green);
+         set(led_port,blue);
+         for (pwm = 0; pwm < count; ++pwm)
+            PWM_delay();
+         }
+      //
+      // blue -> on
+      //
+      for (count = 0; count < 255; ++count) {
+         set(led_port,blue);
+         clear(led_port,green);
+         clear(led_port,red);
+         for (pwm = count; pwm < 255; ++pwm)
+            PWM_delay();
+         set(led_port,blue);
+         set(led_port,green);
+         set(led_port,red);
+         for (pwm = 0; pwm < count; ++pwm)
+            PWM_delay();
+         }
+
+      //
+      // on -> off
+      //
+      for (count = 0; count < 255; ++count) {
+         set(led_port,blue);
+         set(led_port,green);
+         set(led_port,red);
+         for (pwm = count; pwm < 255; ++pwm)
+            PWM_delay();
+         clear(led_port,blue);
+         clear(led_port,green);
+         clear(led_port,red);
+         for (pwm = 0; pwm < count; ++pwm)
+            PWM_delay();
+         }
+      }
+   }
+
+        </code></pre>
+        </p>
+        
+                <p>       <img src="images/week10/testing.jpg" width=90% height=auto>
+		<legend>Testing the board</legend> </p> 
+        
+        
+        <p>I am yet to decipher the coding skills to satisfactory level, and more testing needs to be done using the Adruino IDE and few interactions with the switch etc.</p>
+        
+        
+    <p>The files created as part this week's assignment is available via the link below.</p>
+      <a href="images\week10\outputdevicefinalfiles.7z">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+        <hr>  
+        
+        
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

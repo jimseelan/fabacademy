@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+        
+
+    <h2>Interface and Application Programming</h2>
+    <p>This week is about the interface and application programming and the assignment for the week is to write an application that interfaces with an input and/or output device that we have made, and exploring as many tool options as possible.</p>
+    
+    <h3>My Plan</h3>
+        <p>My plan for this week is to explore the different tools Neil mentioned and then try to make a android interface to interact with the board I have made before. I have chosen the mobile platform due to its wide spread use. I intend to use a bluetooth module for this assignment to speak to the board and the phone.</p>
+        
+    <h3>Bluetooth module HC-05</h3>
+                <p>       <img src="images/week16/File-HC-05.jpg" width=auto height=300px>
+		<legend>Bluetooth HC-05 module</legend> </p> 
+        <p>HC-05 module is an easy to use Bluetooth SPP (Serial Port Protocol) module, designed for transparent wireless serial connection setup. There is lot of information regarding the pinouts and usage in the internet, and few useful links are <a href="https://www.itead.cc/wiki/Serial_Port_Bluetooth_Module_(Master/Slave)_:_HC-05">itead.cc/HC-05</a> and <a href="https://developer.mbed.org/users/edodm85/notebook/HC-05-bluetooth/">developer.mbed</a>.</p>
+        
+    <h3>MIT appinventor</h3>
+        <p>App Inventor is a free, cloud-based service that can be accessed using a web browser. The apps made using the app inventor could be tested on the android phone using the companion app. There are a good amount of learning content available like the ones as http://appinventor.mit.edu/explore/ai2/beginner-videos.html , http://appinventor.mit.edu/explore/ai2/tutorials , http://www.makeuseof.com/tag/make-your-own-android-app-your-unofficial-intro-to-mit-app-inventor/. Also to use the bluetooth on app inventor, there are numerous resouces available like the one on http://pevest.com/appinventor2/?p=520.</p>
+        <p>I created an app by going through the various tutorials, the Design and the blocks screen are shown in the images below.</p>
+        
+  
+<p>       <img src="images/week16/appinventor_design_screen.JPG" width=100% height=auto>
+		<legend>The appinventor design</legend> </p> 
+        
+<p>       <img src="images/week16/appinventor_block_screen.JPG" width=100% height=auto>
+		<legend>The programming blocks used in appinventor</legend> </p>       
+        
+<p>       <img src="images/week16/appscreen.png" width=350px height=auto>
+		<legend>The screenshot from my phone</legend> </p>            
+        
+    <h3>The Initial testing using Arduino</h3>    
+        <p>I first tried programming on a Arduino, and then tried proramming on the attiny44 board created before. I have chosen Arduino for the initial tryouts as there are numerous tutorials and instructions available on the internet. I have went through and tried few of the intructables and tutorials, and finally found <a href="http://www.instructables.com/id/Control-LED-Using-MIT-App-Inventor-and-Arduino/">this instructable</a>, which I have referenced hugely for the code.</p>
+        
+        <strong>Code used on the Arduino</strong>
+            <p>
+            <pre><code>
+                    String voice; 
+                    void setup() {
+                    pinMode(13, OUTPUT);  
+                    Serial.begin(9600);
+                    } 
+                    void loop() {
+                      while (Serial.available())
+                      { 
+                      delay(10); 
+                      char c = Serial.read(); 
+                      voice += c; 
+                      }  
+                      if (voice.length() > 0)
+                      {
+                        Serial.println(voice); 
+                           if(voice == "ON")
+                           {
+                             digitalWrite(13, HIGH);
+                            }  
+                      if(voice == "OFF")
+                      {
+                       digitalWrite(13, LOW);
+                        } 
+                    voice="";
+                    }
+                    }
+
+            </code></pre>
+            
+      <legend>Code used on the Arduino</legend> </p> 
+      
+ <p>Following video depicts the output, i.e controlling the LED via the Android APP.</p>
+
+
+      <div class='embed-container'><iframe src="https://www.youtube.com/embed/PJ2MQiYGVAo?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&playlist=PJ2MQiYGVAo;volume=0" frameborder="0" width="560" height="315" allowfullscreen></iframe></div>
+     
+      
+      
+      <p> <legend>Video (on youtube) depicting the initial testing done on Arduino</legend> </p> 
+
+
+
+<h3>Testing on Attiny-44</h3>
+      <p>After testing the code on Arduino, now I plan to try it on the  RGB board made as part of my Output devices week. And here I am trying to control it via bluetooth using an Android App. Since Attiny44 do not have a serial communication hardware, we needed to use the software serial. This is done by initiating software serial by setting two pins as the Rx and Tx pins.
+      </p>
+      
+      <H2>Try-1 on the RGB board (Unsuccessful)</H2>
+      <code><pre>
+      
+      
+       #include <SoftwareSerial.h>
+       #define RxD 3
+       #define TxD 7
+       #define DEBUG_ENABLED  1
+       SoftwareSerial blueToothSerial(RxD,TxD);
+          String voice; //I later found that using String will not work due to memory limitations on Attiny. 
+          
+
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(0, OUTPUT);  
+  blueToothSerial.begin(9600);
+}
+ 
+void loop()
+{
+  setColor(255, 0, 0);  // red
+  delay(1000);
+  setColor(0, 255, 0);  // green
+  delay(1000);
+  setColor(0, 0, 255);  // blue
+  delay(1000);
+
+}
+ 
+void setColor(int red, int green, int blue)
+{
+
+while (blueToothSerial.available())
+  { 
+  delay(10); 
+  char c = blueToothSerial.read(); 
+  voice += c; 
+  }  
+  if (voice.length() > 0)
+  {
+    blueToothSerial.println(voice); 
+       if(voice == "ON")
+       {
+  analogWrite(2, red);
+  analogWrite(1, green);
+  analogWrite(0, blue); 
+        }  
+
+  if(voice == "OFF")
+  {
+  analogWrite(2, 0);
+  analogWrite(1, 0);
+  analogWrite(0, 0);  
+    } 
+voice="";
+  
+  }
+}
+      
+      </pre></code>
+      
+      
+      <p>Initially I tried the same logic using the string as I have done on the Arduino, but I was not able to upload that code to the attiny, as there is not enough memory available on the attiny. The error which I got is shown in the following image.
+      <p>       <img src="images/week16/bigsketchrgbbluetooth.png" width=auto height=100%>
+		<legend>The out of memory error while uploading to Attiny44</legend> </p>  </p>
+
+      
+      <H3>Try-2 on the RGB board - Optimizing the memory</H3>
+      <p>I figured out that one way to reduce the size is to remove the vairables, and later also change the string to a one byte number. Some good reference on the memory usage could be found on <a href"https://playground.arduino.cc/Learning/Memory">playground.arduino</a> and <a href"https://cdn-learn.adafruit.com/downloads/pdf/memories-of-an-arduino.pdf">learn.adafruit.</a> From page-19 of the <a href"https://playground.arduino.cc/Learning/Memory">playground.arduino</a> and <a href"https://cdn-learn.adafruit.com/downloads/pdf/memories-of-an-arduino.pdf">learn.adafruit.document</a>, multiple steps are detailed for optimised memory usage. </p>
+      
+      <p>The refined code I have used on the RGB board is mentioned below.</p>
+      <code><pre>
+      
+       #include <SoftwareSerial.h>
+       #define RxD 3
+       #define TxD 7
+       #define DEBUG_ENABLED  1
+       SoftwareSerial blueToothSerial(RxD,TxD);
+       int state = 0; //Please note the change here.
+
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(0, OUTPUT);  
+  blueToothSerial.begin(9600);
+}
+ 
+void loop()
+{
+  setColor(255, 0, 0);  // red
+  delay(10);
+  setColor(0, 255, 0);  // green
+  delay(10);
+  setColor(0, 0, 255);  // blue
+  delay(10);
+
+}
+ 
+void setColor(int red, int green, int blue)
+{
+
+///////////////////////////////////////
+if(blueToothSerial.available() > 0){
+        state = blueToothSerial.read();
+       if(state == 1)
+       {
+  analogWrite(2, red);
+  analogWrite(1, green);
+  analogWrite(0, blue); 
+           blueToothSerial.write("LED ON");
+        }  
+
+ else if(state ==0)
+  {
+  analogWrite(2, 0);
+  analogWrite(1, 0);
+  analogWrite(0, 0); 
+  blueToothSerial.write("LED OFF"); 
+    } 
+  
+  }
+}
+      </pre></code>
+      
+          <p>The App also needed to be updated to include the single byte number instead of the text string.</p>
+                <p>       <img src="images/week16/appinventorsinglebyte.JPG" width=auto height=100%>
+		<legend>The updated app inventor code blocks (using single byte number now)</legend>
+          
+          <div class='embed-container'><iframe src="https://www.youtube.com/embed/qc9ca359KNA?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&playlist=qc9ca359KNA;volume=0" frameborder="0" width="560" height="315" allowfullscreen></iframe></div>
+    
+    
+</script> </p>
+     <p> <legend>Video (on youtube) depicting the Android app control of the RGB led board.</legend> </p>               
+          
+
+<h3>Conclusion</h3>    
+    <p>This week I have learned and explored the basics of Interfaces and programming. I have also successfully did a Android App and connected it to my RGB LED board and via bluetooth.</p>
+    
+    
+     <p>The files (codes, APKs etc) created this week is available here.  </p>
+      <a href="images\week16\week16.7z">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+    
+ <hr> 
+      
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

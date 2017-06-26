@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+
+     <h2>Week-01. Principles and Practices, Project Management</h1>
+        <hr>
+    <p>This was my first week at Fabacademy and following are the key activities undertaken over the week. <br>
+        - Introduction and Lecture by Neil and briefings by Yadu, Vishnu and Vinod.<br>
+        - Installing Ubuntu and trying to solve various issues on my Laptop.<br>
+        - Learning the basics of GIT and setting it up on my Laptop.<br>
+        - Learning the basics of HTML, bootstrap and the fabacademy template.<br>
+        - Enjoying the creation of my first ever website.<br>
+        - Sketched my Final project idea.</p>
+        <hr>
+        
+
+    <h3>Ubuntu and the window focus</h3>    
+	<p>Setting up Ubuntu was not very difficult, but trying to solve the anooying window not focusing issue has taken the lion share of my initial week. BTW, I am a newbie to Ubuntu, and installed it on a 5 year old Lenovo T420 which my friend loaned me for the 6 months of Fabacademy. Windows is working okay on this T420, but for some strange reasons on Ubuntu, the mouse will not click on the front window. This issue will pop in after 2mins of logon and was a real annoyance. I tried searching the various forums and tried the various solutions. Few of the things I tried out are <br>
+        </p>
+        <ul>
+        <li> Initially I thought its a mouse issue and done some search on that regard, but after few hours I could figure out that the issue was with the 'window focus'. </li>
+        <li> As mentioned <a href="http://www.webupd8.org/2015/11/fix-for-some-apps-starting-behind.html">here</a>. I Installed the compizconfig-settings-manager, and changed the "Focus Prevention Level" from 'Low' to "Off". This seemed to solve the problem on Day-1, but unfortunatly the issue came back. </li>
+            <li> Then as mentioned <a href="http://askubuntu.com/questions/697002/strange-window-focus-behavior-with-ubuntu-15-10-and-gnome">here</a>. I made the changes in Unity Tweak tool, but of no much use. </li>
+            <li> By this time I have figured that this issue sometime goes off on ots own; but returns after a few minutes. </li>
+            <li> Then via Terminal I tried <code>Unity --replace</code> which temporarily did a reset and a temporary relief. </li>
+            <li> Later I found that only <code>Unity</code> will also solve, but again momentarily only.</li>
+            <li> Later upon discussion with my peers here, I installed <a href="http://www.tecmint.com/install-cinnamon-desktop-in-ubuntu-fedora-workstations/">Cinnamon</a>. I really liked the UI, but after 2 minutes of usage the window focus issue was back there too. </li>
+    </ul>
+        
+        Unfortunately, none of the above solutions gave a permamnent fix to the issue. So I need to be get annoyed with Ubuntu till I get a new laptop. In the mean time I have managed to get the website made on windows using brackets. I then used Github to take it to Ubuntu, and then used git to push it to the fablab repository. </p>
+    
+      
+        <h3>Git - Setting it up and using</h3>   
+        
+    <p>Git is used as the version control system at the Fabacademy. The first fabacademy specific activity that I have done at the fablab is setting up GIT and using it. After Neils session, our local Instructor Yadu gave us a brief on Git and about the process of using and setting it up. GIT was entirely new to me and initially I was skeptical on my capabality to understand GIT, but after learning to use it I think I am having a fair idea of it. <br>
+        I have also found an interesting simulator to try git without worrying about any wrong doings. The link of this git simulator is <a href="https://try.github.io/">here</a>  </p> 
+      <p>
+          <strong>Steps followed to setup git</strong>
+        <li>Create a fab lab account, and then create the gitlab account on <a href="http://git.fabacademy.org">git.fabacademy.org</a></li>
+        <li> Then install git by entering the following code in git. <code>sudo apt-get install git</code></li>
+        <li>Then we need to generate the ssh keys by entering the following command in terminal <code>ssh-keygen -t rsa -b 4096 -C "enter mail id"</code></li>
+        <li> The file name will be asked and enter it, or preferrably use the default location itself.</li>
+        <li>A passphrase will be asked them, and need to enter an easy to remember one.</li>
+        <li>Id_rsa is your private key and id_rsa is your public key</li>
+        <li>Then need to ensure that the ssh agent is enabled by entering eval <code>"$ (ssh-agent -s)" #ensure ssh agent is enabled</code>.</li>
+        <li>Then add the ssh key to the agent by ntering <code>ssh-add ~/.ssh/id_rsa</code></li>
+      <li>Then global user id and global email ide needs to be added. The following commands are used for adding username <code>git config --global user.name "Enter your username"</code> and the following for the email <code>git config --global user.email mail id</code> </li>
+          <li>This user name needs to be given to instructor so that he could add us as users to the class repository</li>
+          <li>Then we need to enter the public key to the gitlab account by <code>sudo gedit ~/.ssh/id_rsa.pub</code> copy the entire contents fron the gedit window and close the window.Then paste this key to git.fabacademy.org under <strong>Profile Settings >> SSH keys >> Keys. Also need to ensure that a title is given to identify the PC used. And then click add key.</strong></li>
+          <li>Then using terminal navigate to a directory, in my case I used the documennts folder. Then type the collowing to clone the repository <code>git@git.fabacademy.org:fabacademy2017/fablabtrivandrum.git</code></li>
+      </p>
+<p>
+    <strong>Commands for day-to-day use of GIT</strong><br>
+      There are lot of commands in GIT, but to achieve the basic day-to-day activities could be illustrated as in the following diagram.<br>
+            <img src="images/week1/GITchart.gif" width=100% height=auto>
+		<legend>This chart depicts my understanding of the basic operations on GIT.</legend> <br>
+    <pre class="prettyprint linenums">
+	git status
+    git add --all
+    git commit -m "comment"
+    git pull
+    git push
+	</pre>
+    <!--<li><code>git status</code></li>
+    <li><code>git add -all</code></li>
+    <li><code>git commit -m "comment"</code></li>
+    <li><code>git pull</code></li>
+    <li><code>git push</code></li>
+         </p>-->
+     <p> 
+    <img src="images/week1/gitubuntuss.png" width=100% height=auto>
+    <legend>Screenshot after the git push</legend><br>
+     </p>
+      
+      <h3>Creating my first ever webpage.</h3>
+    <p>This was the most exciting part of this week, where I have learned something that I always wanted to learn and thought to be very very difficult. My first step was to go through the <a href="http://www.w3schools.com/">w3schools</a> website and understand about the <a href="http://www.w3schools.com/html/html_basic.asp">html basics</a>. Using the 'Try it' browser on the site I went through the various examples on this. Then I tried to create an empty file, then renamed it to index.html, and entered the code to display "This is my first website". I opened it in chrome and hurray my first webpage is made. <br>
+  
+        <img src="images/week1/myfirstpage.PNG" width=100% height=auto>
+		<legend>A screen shot of my first webpage</legend><br>
+ 
+        Then I went through few links learning bit more about the various html codes, styles, css etc. I also watched <a href="http://www.youtube.com/">this</a> interesting video abou bootstrap on youtube. Learning about bootstrap was very exciting, and it really accelerates the website creation process. Then from the fabacademy website I found this <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by Massimo Menichinelli and found it very interesting. I read through the html codes of the various pages and  got a basic understanding of the structure and logic behind the template. <br><br>
+    All the time while I was working on Ubuntu I needed to reset the GUI by entering <code>Unity -replace</code> very frequently to keep the mouse focussed on the top window. And as a result by this time I was already fed up with the annoying focus issue on Ubuntu and decided to get the website to be build my website on windows. My plan was to do the website in Windows, upload it to my account in github and then download it to Ubuntu and then upload to the fabacadamy repository using git.
+                <img src="images/week1/github_ss.PNG" width=100% height=auto>
+		<legend>A screen shot of my github page used to transfer.</legend>
+        </p>
+      <br><br>
+    On the editor part, I tried the bluefish editor on Ubuntu, which was easier to use than the inbuilt Gedit editor. I also tried installing Brackets on Ubuntu, but the installation was not successfule despite number of attempts, and the issue was due to some dependencies. Then I installed Brackets on Windows. I really liked brackets over Bluefish or Gedit, mainly because of the simple design, and personally I felt its bit easier to use. Initially I modified the landing page index.html and then I started eeg the aboegut.html page. That night I also shared the link to our group for feedback. Our local instructor Vishnu mentioned about my photo on the webpage not responsive. I explored through the pages and thee css and found that the issue is with a specific pic class on the fabacademy.css, so I changed the code on the about.html page to the default image tags as <code>img src="images/week1/myimage.jpg" width="500" height=auto</code>, which made the images responsive.
+      </p>
+      
+              <p>
+        <img src="images/week1/brackets_ss.PNG" width=100% height=auto>
+		<legend>A screen shot of the bracekts editor I am using.</legend>
+        </p>
+      
+ <!--  <p>
+        <img src="images/week1/github_ss.PNG" width="700" height=auto>
+		<legend>A screen shot of my front page as of 31/Jan/2017.</legend>
+        </p> --->
+      
+<h3>Final Project Idea</h3>
+    <p>As part of this weeks assignment, we are required to identify our final project. I am planning to do a 3D human scanner. My plan is to make a rig that could mount a rotating camera to take multiple photos of the subject across 360-deg. Then these photos could be stictched and made into a model using a photogrammetry application. I am researching on the possibles apps and techniques and will be posting a more detail plan soon. 
+    </p>
+    <p>
+        <img src="images/projectconcept1.jpg" width=100% height=auto>
+		<legend>A rough sketch of my project idea - 3D human Scanner.</legend>
+        </p>
+<p>I shall be updating more details of this idea on my <a href="project01.html">Concept page</a> <br>
+    My weeks work was reviewed by our Local Instructors Yadu and Vishnu. We also had our Super node review by Pradnya on Tuesday 31st January. This week was an good start, meeting fabulous people and learning many interesting things. Thanks for reading my first weeks assignment page. </p>
+    <hr>
+    <br>
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+        </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

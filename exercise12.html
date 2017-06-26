@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+<h2>Input Devices</h2>
+        <p>This week's assignment is to >> measure something: add a sensor to a microcontroller board that you have designed and read it. I have used the fabI/O board I have designed and made during the output week and connected a Ultrasound sensor HC04.</p>
+        
+    <h3>Design and Make of the board</h3> 
+        <p>On the fabi/o board I have created during the output week, I have purposefully put given some spare pins, that I could use for this week. The schematics and the PCB are made using EAGLE and the board was milled using the modella in our lab.</p>
+        
+                           
+        <p>       <img src="images/week10/eagleschiodevices.JPG" width=80% height=auto>
+		<legend>The schematics made using Autodesk Eagle</legend> </p> 
+        
+        <p>       <img src="images/week10/eaglebrdiodevices.JPG" width=400px height=auto>
+		<legend>The board designed using Autodesk Eagle</legend> </p> 
+
+        <p>       <img src="images/week10/milledbrd.jpg" width=400px height=auto>
+		<legend>The milled board after removing the burrs</legend> </p>      
+        
+        
+        <p>       <img src="images/week10/finalboard.jpg" width=400px height=auto>
+		<legend>The board with all the components soldered</legend> </p> 
+        
+        
+        <h3>Ultrasonic Sensor</h3>
+        
+        <p>I have used a ultrasonic sensor module HC04 which is availabe for ~300INR on amazon.</p>
+        <p>       <img src="images/week13/ultrasonic-sensor-module-hc-sr-04.jpg" width=400px height=auto>
+		<legend>The HC04 Ultrosound sensor module</legend> </p> 
+        
+        <p>The HC-SR04 Ultrasonic Module has 4 pins, Ground, VCC, Trig and Echo. The Ground and the VCC pins of the module needs to be connected to the Ground and the 5 volts supply respectively and the trig and echo pins to any Digital I/O pin on the microprocessor. <br>
+            It emits an ultrasound at 40,000 Hz which will bounce back to the module if there is an object or obstacle on its path. Distance could then be calculated by considering the travel time and the speed of the sound.
+      </p>
+        
+        <h3>Programming</h3>
+        <p>I have used the Arduino IDE for coding the board. Initially I tried coding an Arduino UNO to which the HC04 is connected. This code could be found <a href="images\week13\codes.7z"><strong>here</strong></a>. I have mainly used this as my first try in testing the HC04 sensor module. </p>
+
+        <p>       <img src="images/week13/ultrasoundarduino.gif" width=500px height=auto>
+		<legend>The HC04 with Arduino and LED</legend> </p> 
+        <p>I then modified the code to include a LED connected to PIN13, and the coded such a way that the LED turns ON when the distance is more than 25cm. This code could be found <a href="images\week13\codes.7z"><strong>here</strong></a>. I have used this to check the functionality before programming the board that I have made.</p>
+        
+        <p>Finally, I programmed the Attiny44 using the Arduino IDE. My board had a RGB LED, and two spare pins. I connected the HC04 and this time did the programming to turn ON the RGB LED when the disance is less than 25cm. This code could be found <a href="images\week13\codes.7z"><strong>here</strong></a>. This way the sensor could also act as a proximity sensor. </p>
+        
+        <p>       <img src="images/week13/ultrasoundattiny.gif" width=500px height=auto>
+		<legend>The HC04 with Arduino and LED</legend> </p> 
+        
+        <h3>Conclusion</h3>
+        <p>This week, I have used the Ultrasound sensor, and learned to connect and program it. I was thus able to make a proximity sensor that couldbe applied to my project also.</p>
+        
+            <p>The EAGLE files for this week's assignment is available via the link below.</p>
+      <a href="images\week10\outputdevicefinalfiles.7z">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+ <hr>
+        <p>And the codes for this week's assignment is available via the link below.</p>
+      <a href="images\week13\codes.7z">
+	<button type="button" class="btn btn-primary btn-lg">Download the Codes</button>
+	</a>
+        
+        <hr>  
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

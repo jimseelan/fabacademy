@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="60mm"
+   height="60mm"
+   viewBox="0 0 60 60"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="inscape_original_svg_smile.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4494"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4492" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4494"
+       id="linearGradient4496"
+       x1="18.708868"
+       y1="102.42778"
+       x2="27.528761"
+       y2="102.42778"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0023015,0,0,1.0747111,-3.6270163,145.02629)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4494"
+       id="linearGradient4496-0"
+       x1="18.708868"
+       y1="102.42778"
+       x2="27.528761"
+       y2="102.42778"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0023015,0,0,1.0747111,15.980945,145.02628)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="91.306943"
+     inkscape:cy="76.553462"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="703"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-237)">
+    <ellipse
+       id="path10"
+       cx="30.225225"
+       cy="259.76407"
+       rx="25.324402"
+       ry="20.872581"
+       style="stroke-width:0.2104875" />
+    <ellipse
+       id="path12"
+       cx="19.544998"
+       cy="255.10657"
+       rx="4.4200964"
+       ry="6.606463"
+       style="fill:url(#linearGradient4496);fill-opacity:1;stroke-width:0.27460441" />
+    <ellipse
+       id="path12-6"
+       cx="39.15295"
+       cy="255.10657"
+       rx="4.4200964"
+       ry="6.606463"
+       style="fill:url(#linearGradient4496-0);fill-opacity:1;stroke-width:0.27460441" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.15939794"
+       d="m 19.257734,269.01289 a 11.488982,10.327407 0 0 0 10.866328,7.01247 11.488982,10.327407 0 0 0 10.86909,-7.01247 z"
+       id="path4520"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.84698868px;line-height:5.52936792px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22117472"
+       x="7.126791"
+       y="295.10657"
+       id="text4538"
+       transform="scale(1.0145529,0.98565585)"><tspan
+         sodipodi:role="line"
+         id="tspan4536"
+         x="7.126791"
+         y="295.10657"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.22117472">do SMILE</tspan></text>
+  </g>
+</svg>

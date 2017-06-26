@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+        <h1>Embedded Programming</h1>
+        Here I am starting my baby steps on Embedded Programming. This week, I have done some basic programming on the board designed and made during the Electronic Design Week. An LED is used for Output and a switch is used as the Input for interacting with the ATTINY44 microprocesser used in the board.
+        
+        <h2>Datasheet of Attiny44</h2>
+        <p>A datasheet, is a document that summarizes the performance and other technical characteristics of the microprocessor. This is the first time I am going through the datasheet, and to be frank I did not understood much. Later I understood that, these datasheets are something that should NOT be read as a Novel, instead should be used as a directory or catalogue to find the information we want. Anyway for the time being I was able to understand few specifications and importantly the pinouts. </p>
+             <img src="images/week8/attiny44.png" width=100% height=auto> 
+    <legend>Pinouts of Attiny44 </legend> 
+        <p>There is also a more detailed pinout available <a href="http://42bots.com/wp-content/uploads/2014/01/ATTiny84-ATTiny44-pinout.png">here</a> </p>
+        
+        <p>I was also able to understand some information on the various port details as mentioned.</p>
+        
+        <p><b>Port B (PB3:PB0)</b> is a 4-bit bi-directional and <b>Port A (PA7:PA0)</b>is a 8-bit bi-directional I/O ports with internal pull-up resistors (selected for each bit).</p>
+<p><img src="images/week8/Selection_011.png" width=100% height=auto> 
+    <legend>Ports on Attiny44, (I've used PA2 for LED and PA7 for Switch) </legend> </p>
+        
+                
+        <h2>Programming my board</h2>
+        
+        <p>I have connected a blue LED to port PA2, and a swith on PA7 on my board created during the <a href="http://archive.fabacademy.org/archives/2017/fablabtrivandrum/students/312/exercise06.html">electronics design week</a>. I have tried programming using AVR-C and also using the Adruino IDE. And being a newbie, I found that the learning curve for Arduino IDE is steeper than for AVR-C.</p>
+        
+        <h3>Using AVR-C</h3>
+        
+        <p>In this week, I have used Atom to write and edit my C code, and used the Compflash GUI developed Yadu for compiling and Flashing. (Compflash is a gui for avr-gcc and avrdude written in python2.7 and could be found <a href="https://github.com/yadusharon/compflash">github/yadusharon/compflash</a>). I am using the USBTiny created during the electronics production week as my ISP.  </p>
+        
+        <h4>Blinking the LED</h4>
+        
+        <p>
+        <pre><code>
+#include &lt;avr/io.h&gt;       // Importing the avr/io library (as stdio.h in the normal C) 
+#define F_CPU 20000000      //telling the frequency, here the 20Mhz of the Resonator
+#include &lt;util/delay.h&gt;       // Importing library for  delay (For blinking LEDs we need delay)
+
+int main(void)
+{
+	DDRA = 0b00000100;       //Set Pin PA2 on PORT A as output
+
+    while(1)
+    {
+		PORTA = PORTA | (0b00000100); //PA2 is 3 from left
+
+		_delay_ms(1000);          // delay of 1 second
+
+		PORTA=(0x00);            // Make all pins in port A low
+        
+		_delay_ms(1000);         // delay of 1 second
+	}
+}
+</code></pre>
+        </p>
+        <p>It took me really lot of effort to make this program work and on the understanding of the basics of the working of this program including the representation of ports etc. The details are entered as comments in the code above.</p>
+      
+      <h5>Using Compflash</h5>
+      <p>After cloning <a href="https://github.com/yadusharon/compflash">compflash from github</a> to a local folder in ubuntu, open a terminal on the Compflash folder and enter <code><a href="https://github.com/yadusharon/compflash">github/yadusharon/compflash</a>)</code>. And then we can use the GUI as below.</p>
+      
+       <p>    <img src="images/week8/compflash.png" width=50% height=auto> 
+    <legend>Compflash GUI for GCC and AVRdude  </legend> </p>
+      
+      <h5><b>Fuses</b> - low DE , high - nochange</h5>
+      <p>The low fuse is set as DE and the high one is not set. DE is set for using the external resonator and for disabling the division of clock by 8. These fuses are actually to be set by referring the datasheets, which I am yet to decipher. For the time being I am going ahead using the low fuse as DE, which is okay for typical applications. More details on finding the fuse values could be found on<br> <a href="http://www.ladyada.net/learn/avr/fuses.html">ladyada/learn/avr/fuses</a> <br>
+          <a href="http://www.engbedded.com/fusecalc/">engbedded.com/fusecalc/</a> <br>
+          <a href="http://eleccelerator.com/fusecalc/fusecalc.php?chip=attiny44&LOW=DE&HIGH=FF&EXTENDED=FF&LOCKBIT=FF">eleccelerator.com/fusecalc</a>
+          
+                 <p>    <img src="images/week8/fusevalues.png" width=100% height=auto> 
+    <legend>Value for Fuses used - Low DE screenshot from <a href="http://eleccelerator.com/fusecalc/fusecalc.php?chip=attiny44&LOW=DE&HIGH=FF&EXTENDED=FF&LOCKBIT=FF">eleccelerator.com/fusecalc</a>  </legend> </p>
+      </p>
+        
+        <h4>Using Arduino IDE</h4>
+      
+      <p>I downloaded and installed <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and then followed the steps <a href="http://highlowtech.org/?p=1695">here</a> to install the ATTiny board. Its important to choose the external 20Mhz clock. </br>
+    The settings used for the board (under Menu>Tools> is available in the following image.
+     <img src="images/week8/adruinoattinypng.jpg" width=50% height=auto> 
+    <legend>Selecting the board, clock speed, programmer on Arduino IDE </legend> 
+    </p>
+        
+        <p>I tried few programs on Arduino IDE as shown in the images below.</p>
+        
+    <p>
+     <img src="images/week8/Blink%20%7C%20Arduino%201.8.1_007.png" width=50% height=auto> 
+    <legend>A simple Blink program </legend> 
+</p>
+        
+            <p>
+     <img src="images/week8/turnledonwhenpressed%20%7C%20Arduino%201.8.1_008.png" width=50% height=auto> 
+    <legend>A program to turn ON the LED when the switch is pressed</legend> 
+</p>
+        
+                   <p>
+     <img src="images/week8/turnledoffwhenpressed%20%7C%20Arduino%201.8.1_009.png" width=50% height=auto> 
+    <legend>A program to turn OFF the LED when the switch is pressed</legend> 
+</p>
+
+
+                   <p>
+     <img src="images/week8/switchledphoto.gif" width=50% height=auto> 
+    <legend>Pressing the switch to ON the LED</legend> 
+</p>
+
+<p>The Adruino sketches created this week is available <a src="images/week8/arduinoprogramsweek8.zip">here</a>.</p>
+
+<h4>Conclusion</h4>
+<p>This week I've learned about the basics of the Atmel tiny series eepecially Attiny44 and the basics of AVR programming. I've tried few programs interacting with the switch and response via a LED. Being a newbie in Embedded Programming, I've found that Arduino is bit more easier to understand and use, and for basic programming needs the larger hex file from arduino may not be of an issue. So for the time being my aim is to stick on with the Arduino IDE.</p>
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+          
+<h2>Composites</h2>
+
+<p>This week got introduced to composites fabrication, and this weeks assignment included reading of the material safety data sheet (MSDS) and technical data sheet (TDS) for the resins that at our lab. And mainly to design and fabricate a 3D mold (~ft2) and produce a fiber composite part in it. </p>
+    
+        <p>       <img src="images/week14/heroshot.JPG" width=50% height=auto>
+		<legend>Its me with the 'portable composite seat', designed and fabricated this week.</legend> </p>        
+        
+
+
+<h3>My Idea for Composite Week - Portable Perfect Seat - Pelvis Lift</h3>
+
+<p>Considering the ability to make curved form features by Composites, I thought it would be a good idea to make a Perfect seat. A bit of search in the internet showed that the sitting muscles on strecthes undesiringly when we sit in not so good chair or more importantly when not sitting in the correct posture. </p>
+
+<p>       <img src="images/week14/backsuportdraw.JPG" width=80% height=auto>
+		<legend>The 'need' for a perfect seat.<a href="http://posturedirect.com/proper-way-sit/">(Reference)</a>. </legend> </p>   
+        
+<p>Technically the muscles should be so supported that the pelvis is in the neutral position. Please see images and a good read on this subject is available in the following <a href="http://posturedirect.com/proper-way-sit/">posture direct link</a>. So I decided to make a seat that properly supports our sitting muscles and hence aiding the proper pelvic position. Also I thought to make it portable so that it could used in a car, at work etc. </p>
+       
+
+
+<h3>Design</h3>
+
+<p>I used Autodesk Fusion to do the Design. First I made the surface and then created the top and bottom solids. The steps used to create the seat surface and the mould parts are illustrated in the animation below</p>
+        
+<p>       <img src="images/week14/makefusionsteps.gif" width=80% height=auto>
+		<legend>The modelling steps followed in Autodesk Fusion </legend> </p>        
+ <p>       <img src="images/week14/surface.JPG" width=80% height=auto>
+		<legend>The seating surface designed using Autodek Fusion </legend> </p>       
+        
+<p>       <img src="images/week14/surface_slopes.JPG" width=80% height=auto>
+		<legend>The seating surface later modified with a outer profile and the depth to fit the stock plywood thickness.  </legend> </p>  
+        
+<p>       <img src="images/week14/surfaceanalysis.gif" width=80% height=auto>
+		<legend>Surface Draft Analysis, notice the slopes on multiple planes.  </legend> </p>             
+        
+ <p>       <img src="images/week14/zebraanalysis_surface_continuity.JPG" width=80% height=auto>
+		<legend>Zebra Analysis, notice the continous lines illustrating surface continuity and hence a smooth surface. </legend> </p>   
+    
+<p>Later I also used NX to make the outer walls and the back support. See images attached moulds attached.  </p>
+            
+<p>       <img src="images/week14/Seat_Mould_bottom.jpg" width=500px height=auto> 
+                        
+ <img src="images/week14/Seat_Mould_Top.jpg" width=500px height=auto>  </p>
+     
+ <p>       <img src="images/week14/Seat_Mould_3_parts.jpg" width=500px height=auto>       
+        		<legend>The Top and bottom moulds designed in NX. </legend> </p>   
+        </p>
+
+
+    
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/40fee272465042bb9d91788c916e9502/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center">
+    <a href="https://sketchfab.com/models/40fee272465042bb9d91788c916e9502?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Composite Seat Mould - Bottom Half</a>
+    by <a href="https://sketchfab.com/jimseelan?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">jimseelan</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>   
+      
+      
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/d3dd593b230c4ad9ab57aa57dca29964/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center">
+    <a href="https://sketchfab.com/models/d3dd593b230c4ad9ab57aa57dca29964?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Composite Seat Mould - Top Half</a>
+    by <a href="https://sketchfab.com/jimseelan?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">jimseelan</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>      
+      
+    
+      
+      
+
+<h3>Fabricating the Mould</h3>
+<p>The tool paths were generated using Partworks software, and its cut uing the Shop bot. I have used (Avg) 18.7mm thk ply as the stock material. The mould is made in two pieces. The machining process started with the Rough cut using 6mm flat end mill, Finish Maching using 6mm Round head end mill, and the final outer profile cut using 6mm flat end mill. Each part took ~1.5 hrs each for rough cut, 30 mins each for the finish cut and 5mins each for the outer profile cut. I need to change the CNC code for the outer profile cut to cut out the piece fully as the thickness of the ply was not uniform.  </p>
+<p>The thickness on the base mould was bit low and I added few supports at the rear side. But if we are using say uniform thickness ply with atleast 18.5 mm every where then the back support need not be added. </p>
+
+    
+ <p>       <img src="images/week14/bottom_milling.jpg" width=500px height=auto>   </p>
+     
+ <p>       <img src="images/week14/top_finishcut.jpg" width=500px height=auto></p>      
+
+      <p>       <img src="images/week14/top_mould.jpg" width=100% height=auto>   </p>   
+      
+            <p>       <img src="images/week14/bottom_mould.jpg" width=100% height=auto>   </p>   
+
+<h3>Details of the Resin used</h3>
+
+<p>Information from <a href="http://www.amazon.in/MurtiSil-Transparent-Epoxy-Resin-911133000750/dp/B018TRE1K0?tag=googinhydr18418-21">Amazon India</a> regarding Aditya easy cast epoxy-33-A and Easy cast-33-B
+Epoxy Resin Murtisil 33 to make transparent statues.
+Very less viscosity
+Can Cure in 30 minutes if heated at 65 degree centigrade and poured
+Will cure at room temp in 24 hours
+Non - Yellowing
+Mix A and B in 2:1 ratio by weight</p>         
+      
+<h3>Composite Fabrication</h3>
+      <p>First the tape is stuck on the mould surfaces to ensure that the resin is not sticking to the rougher mould surfaces. I have used 5 layesr of Jute sheets (from discarded bags) and two layers of cotton cloth. The sheets were cut to the profile so that they fit inside the bottom mould properly. Then the resin and the hardner are missed in the ration of 1:0.5, and I needed to use 400g of Resin and 200g of hardner. After thoroughly mixing the resin and hardner, then the fabric is immersed in the resin mix and layed one by one on the bottom mould cavity. The two layers of cloth are used in the top and bottom and the resin layer is used in between. After all the layers are placed, the tp mould is used to close, and then I malleted it and also used pressure by hand first and later put the moulds under a heavy dust bag filled with the shop bot wood chippings. I left it for curing overnight and next day opened the mould and got the composite seat part out. These steps are illustrated in the following images.</p>
+      
+      <p>  
+      <img src="images/week14/materialsforcomposites.jpg" width=500px height=auto> 
+          
+  
+      <p>
+      <img src="images/week14/layingup1.jpg" width=500px height=auto> 
+      <img src="images/week14/layingup2.jpg" width=500px height=auto> 
+      <img src="images/week14/pressingthemoulds.jpg" width=500px height=auto> <img src="images/week14/openedmould1.jpg" width=500px height=auto>     
+      <img src="images/week14/openedmould2.jpg" width=500px height=auto>     
+      <img src="images/week14/trimmingtheedjes.jpg" width=500px height=auto>   
+      </p>
+      
+      <p><img src="images/week14/seatcloseup.JPG" width=500px height=auto>  </p>
+        
+        <h3>Conclusion</h3>
+        <p>This week, I have learned the designed and fabrication of composite parts and successfully made a composite portable seat. </p>
+        
+            <p>The design files and the toolpaths for this week is available here  </p>
+      <a href="images\week14\compositefiles.7z">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+    
+ <hr>
+          
+          
+          
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

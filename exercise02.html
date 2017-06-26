@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+     <h2>Week-02. Computer Aided Design</h2>
+    <hr>
+    <p>This weeks assignment is to explore the different 2D and 3D design tools and use and evaluate them. And then to Model (draw, render, animate, simulate, …) a possible final project, and post it on the class page</b><br>
+      <hr>
+      <h3>2D Design</h3>
+      <p>I explored various concepts of 2D like <a href="https://en.wikipedia.org/wiki/Raster_graphics">Raster</a> and <a href="https://en.wikipedia.org/wiki/Vector_graphics">Vector</a>, and found that the Raster tools and formats are good for photo editing and the Vector tools and formats are especially useful in retaing the stroke and fill characterstics and will also not lose qualityupon zooming.</p>
+      <p>I explored the various common <strong>Raster</strong> file formats like the <a href="https://en.wikipedia.org/wiki/GIF">GIF</a>, <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>, and <a href="https://en.wikipedia.org/wiki/JPEG">JPEG</a>. On the Raster image editing tools I explored the various Selection techniques, the usage of layers, Scaling, Cropping, Compositing and the usage of inbuilt filters.</p> 
+    <p>On the 2D <strong>Vector</strong> Graphics front, I understood that the vector graphics consists of mathematically expressed elements. The interesting feature here is that the images can be scaled infinitely without losing quality. Any 2D vector elements have a stroke and fill and we can do vector operations like rotate, mirror, union, intersection, difference, etc. The most comonly used SVG (Scalable Vector Graphics) is the standard vector image format supported by most web-browsers. Also I learned from the local instructors that the formats like SVG and DXF are used for the laser cutting tool in the fablab. </p>
+      <hr>
+                  <p><img src="images/week2/boyincar.jpg" width=80% height=auto>
+		<legend>Photoediting experiment using Photoshop,  GIMP and my Son and his favorite hotwheels toy car :) </legend>
+      <h4>Photoshop and GIMP</h4></p>
+    <p>Photoshop is a professional image edting tool and GIMP is a very good free alternative. Choosing between GIMP and Photoshop gets a lot easier;  if one a professional or someone who is going to use all the extra tools then Photoshop is the obvious tool. And if one have a Linux machine, are on a budget, or only need to use the app occasionally then GIMP is the app to go with. A very interesting comparison of these tools is discussed <a href="https://blog.udemy.com/gimp-vs-photoshop/"><b>here</b></a> </p> 
+    <p>I explored Gimp and photoshop. Gimp was entirely new to me and I found it very user friendly, I tried removing the background etc. The image editing assignment was made a fun family weekend activity. With my son Ethan as the model with his toy car and my wife’s  creative contributions. And we made the edited image in photo shop as above. The detailed steps of creation are shown in the GIF animation created using powerpoint and the online tool <a href="http://gifcreator.me/">GIFcreator</a>.    </p>
+                      <p><img src="images/week2/compgifethanincar.gif" width=60% height=auto>
+		<legend>Steps performed on Image editing</legend>
+                          <hr>
+  
+<h4>My Paint</h4>
+    <p>I found that the 'My Paint' is very advanced than the default windows 'Paint' application. Mypaint is very easy to use, I have also used a tablet and drawn my favourite childhood painting of a landscape. I really liked using Mypaint with the tablet.</p>
+    <p><img src="images/week2/mypaintscreen.png" width=80% height=auto>
+		<legend>My Paint - a very good alternative to drawing paper</legend>
+</p><hr>
+      <h4>Microsoft Office Picture Manager'</h4>
+    <p>I have used 'Microsoft Ofice picture Manager' on Windows, for basic image editing tasks. I have used this tool, for resizing and compressing the images for the webpage. I also frequently use the auto adjust feature which enhances the photographs. </p>
+        <p><img src="images/week2/mspicturemanager.PNG" width=80% height=auto>
+		<legend>MOPM - for Quick and Photo editing</legend> 
+    <hr>
+    <h4>Snapseed</h4>
+    <p>Snapseed is a mobile application and I tried this on my Phone. This is very easy to use with a intuitive user interface. All the basic image editing options are available in this tool, and also some good filters.</p>
+                   <p><img src="images/week2/snapseed.png" width=40% height=auto>
+		<legend>SnapSeed - Editing on the go</legend> 
+            <hr>
+    <h4>Inkscape</h4>
+    <p>I tried using inkscape and I really like this vector based 2D tool. Its interesting to do the various operations like a 2D design tool. I tried to create the logo for my proposed final page. The Logo file I created using Inkscape available <a href="images/week2/inkscapelogo.svg"><b>here</b></a>  </p>
+               <p><img src="images/week2/Inkscapescreen.png" width=80% height=auto>
+		<legend>Inkscape - For creating Scalable Vector Graphics</legend> 
+            <hr>
+    <hr>
+    
+    
+    
+        <h3>3D CAD</h3>
+    <p>In <a href="https://en.wikipedia.org/wiki/3D_computer_graphics" title="3D computer graphics">3D computer graphics</a>, <b>3D modeling</b> is the process of developing a mathematical representation of any Three dimensional surface</a></i> of an object via <a href="https://en.wikipedia.org/wiki/3D_computer_graphics_software" title="3D computer graphics software">specialized 3D software</a>. </p>
+
+<p>I have explored some of the CAD packages like the 'coding' based Openscad,'cloud' based Onshape, 'opensource' Freecad', Simple Maker style tools like 123DDesign and Tinker CAD, and 'commerecial' cad tools like Solidworks & NX</p>.
+
+    <hr>
+    <h4>OpenScad</h4>
+    <p>I have tried using openscad and this application uses coding to create and edit models. say like cube(1,2,3) etc. i have found a cheatsheet of the commands <a href="http://www.openscad.org/cheatsheet/index.html?version=2015.03"> here</a>. Personally I found it is very difficulty to use. But for a novice, this could be good learning tool understand the basics and underlying priciples of CAD. Also this technique of creation of models could be used for background generation of CAD data based on datasheets etc as in knowledge based engineering.The scad file I created is available <a href="images/week2/openscadtest.scad"><b>here</b></a>. </p>
+              <p><img src="images/week2/opnscadimage.JPG" width=80% height=auto>
+		<legend>OpenScad - to do CAD by coding</legend> 
+            <hr>
+        
+    <h4>Autodesk 123D Design</h4>
+    <p>123D Design is useful for trying out simple model. Since the parametric relations are not very rigid, it was easy to do free form editing by dragging surfaces etc. Anyway there are sketches and boolean operations also, so we cannot say its fully unparametric. One of the main advantage of this is the easiness to use and the very low system requirements. Upon familiarazation, definitely this could become my go to tool for illustrating ideas quickly in 3D and for 3D printing. I also liked the rendering and the materials in the Library. I modelled a simple enclosure for the electronics for my project in 123D, and the file is available <a href="images/week2/123dhousingdxf.dxf"><b>here</b></a>. </p>
+              <p><img src="images/week2/123dmakeimage.JPG" width=80% height=auto>
+		<legend>Autodesk 123D Design - to Design simple models and for quick rendering</legend> 
+            <hr>
+   
+<h4>Solidworks</h4>
+    <p>Solidworks is a commercial grade 3D CAD software on windows systems. Solidworks has a sketch based workflow, on which almost all the features we create is started or referenced back to a sketch. There are various addons available for Solidworks which helps us to do photorealistic rendering, animations, FEA study etc. I have modelled a simple mechanism with two links (one short and another long), and a pin. I then created the assembly and then did the motion study to create an <b>animation</b> and then did a <b>Simulation</b> study on the short link by giving the boundary conditions. The files are available here <a href="images/week2/Link1.SLDPRT"><b>Small Link</b></a>, <a href="images/week2/LinkLong.SLDPRT"><b>Long Link</b></a> and <a href="images/week2/Pin.SLDPRT"><b>Pin</b></a>, and Screenshots are placed below. I also took a session on Solidworks at Trivandrum Fablab for the benifit of fabacademy-2017 students.
+        <p><img src="images/week2/SW_Render.PNG" width=80% height=auto>
+		<legend>Solidworks - For Parametric Sketch based modelling</legend> 
+<hr>                  
+        <p><img src="images/week2/SWanimation1.PNG" width=80% height=auto>
+		<legend>Solidworks - Using Motion for doing mechanism animations</legend> 
+<hr>            
+        <p><img src="images/week2/swanimationgif.gif" width=80% height=auto>
+		<legend>The animation created on Solidworks and converted using <a href="http://gifcreator.me/">gifcreator.me</a></legend> 
+<hr>            
+         <p><img src="images/week2/swsimulation.PNG" width=80% height=auto>
+		<legend>Solidworks - Doing basic structural simulation studies</legend> 
+<hr>
+         
+    <h4>Onshape</h4>
+    <p>Onshape is a cloud based CAD tool, and I felt that Onshape is sharing many of the logics with Solidworks. This is one of the first cloud based CAD tool I have used, and we could get fast understanding the concepts with some prior knowledge in traditional CAD packages. Onshape has a very active <a href="https://forum.onshape.com/">online community</a>, which is a plus when you start learning a new tool. The free version offers unlimited Public documents which is very much okay for the kind of work at Fabacademy. I have created few models and also tried assembly and the usage of few plugins via the appstore. The online version management is an added plus for managing the various versions of the design documents. I also upgradedmy free account to education as per the email from fabacademy centre co-ordination. The cad files I created for a tachometer housing using Onshape are available <a href="images/week2/tachohousing.zip"><b>here</b></a>. </p>
+              <p><img src="images/week2/onshapescreen2.PNG" width=80% height=auto>
+		<legend>Onshape - A effective cloud based CAD tool to be watched for as future of CAD</legend> 
+                  <hr>
+                  
+     <h4>CAD model of Final Project</h4>             
+    <p>I created the CAD model fo the boom fixture for my proposed final project. I plan to cut this on shop bot, so I made this using multiple profile sheets. I then exported it out as a parasolid and took it to parasolid. My intention was to use few of the standard partts available in the addons on Onshape. I tried putting a bearing from the 3DX Certified model Library. My model is still work in progress and I plan to complete it in the coming weeks as I gather more info on various concepts.</p> <hr>
+<p align="center"> <u>The PRT file and the parasolid files are available on <a href="images/week2/huscan_try1.prt"><b>PRT</b></a> and <a href="images/week2/huscan_try1.stp"><b>STP</b></a>.</u> </p>
+    <hr>
+              <p><img src="images/week2/myprojectnx.PNG" width=80% height=auto>
+		<legend>The boom fixture for my proposed final project created using NX Modelling</legend>             <hr>
+              <p><img src="images/week2/myprojectnxdwg.PNG" width=80% height=auto>
+		<legend>Basic views of my Boom fixture on NX Drafting</legend>             <hr>
+              <p><img src="images/week2/myprojectonshape.PNG" width=80% height=auto>
+		<legend>The boom fixture for my proposed final year project on Onshape,with the bearing from library</legend> 
+            <hr>
+
+
+<h4>Conclusion for Week-2</h4>
+<p> This week's learning was effective, by brushing up the various concepts of 2D and 3D CAD and the various tools. Once I receive the software, I also plan to try out various Autodesk Tools, Blender and Rhino too. My Preference for tools are as follows</p>
+<p><strong>2D Tools</strong></p>
+<li><b>Gimp</b> - for Photo editing.</li>
+<li><b>SnapSeed</b> - For photo editing on the go on mobile.</li>
+<li><b>MyPaint</b> - A very efficient replacement for drawing paper, especially when used with a tablet.</li>
+<li><b>Inkscape</b> - For vector based 2D drawings, logos etc.</li><br>
+<p><strong>3D Tools</strong></p>
+<li><b>123D Design</b> - For simple models, andquick rendering.</li>
+<li><b>OpenScad</b> - For code based modelling, whichI am yet to become a fan of.</li>
+<li><b>SolidWorks</b> - For all 3D design tasks and animation / simulation. </l1>
+<li><b>NX</b> - For all 3D design tasks.</li>
+<li><b>Onshape</b> - For Design on the cloud and especially when I am not using my own computer. </li>
+<hr>
+
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

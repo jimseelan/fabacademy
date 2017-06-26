@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jim Seelan">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2017 - Jim Seelan</title>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Jim Seelan</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+        <h2>Final Project - Steps</h2>
+        
+        <p>I splited the final project in to two main phases. The first one is the physical design and fabrication; and the second one the electronics part. </p>
+        
+        <h3>Designing the FabWheel</h3>
+        
+        <p>As the main work is centered on the robustness of the physical prototype the lions share of the time went into the physical design phase. I used NX as the design tool, and started with a layout initially. This layout is created in the sketch module parametrically, so that I could iterate the design as required.</p>
+        
+        <p> <img src="images/project/sk1.jpg" width=80% height=auto>
+       <p><legend>The layout for finalizing the overall dimensions. This was the starting point of the design where all the overall sizes and shapes where decided. </legend></p>
+        
+        <p> <img src="images/project/sk3.jpg" width=80% height=auto>  </p> </p>       
+       <p><legend>The first shape of the base support which was rounded. </legend></p>        
+
+        <p> <img src="images/project/sk2.jpg" width=80% height=auto>  </p> </p>       
+       <p><legend>The revised shape of the base support which was more pointed. </legend></p>
+        
+        <p> <img src="images/project/SK4.jpg" width=80% height=auto>  </p> </p>       
+       <p><legend>The final 2D layout with the sizes and shapes fixed. </legend></p>
+        
+        <p>Once The layout was a finalized, I proceeded to create the individual components, starting with the base support parts</p>
+        
+        <p> <img src="images/project/side_support.jpg" width=80% height=auto>  </p>       
+       <p><legend>The design of the side support, 2x of these were made. </legend></p>        
+        
+        <p> <img src="images/project/wheel_support_bottom.jpg" width=80% height=auto>  </p>       
+       <p><legend>The design of the wheel support bottom part, 2x of these were made. </legend></p>                
+        <p> <img src="images/project/wheel_support_top.jpg" width=80% height=auto>  </p>       
+       <p><legend>The design of the wheel support top part, 2x of these were made. </legend></p> 
+        
+        <p> <img src="images/project/wheel_support_assy.jpg" width=80% height=auto>  </p>       
+       <p><legend>The Assembly of the wheel support parts, showing a representation of wheel also. </legend></p>   
+        
+        <p> <img src="images/project/end_lateral.jpg" width=80% height=auto>  </p>       
+       <p><legend>End lateral supports were also added to mount the elctronics and toput a wheel lock when not in use. </legend></p>   
+
+
+        <p>Once these parts are made and assembled, then the rings for the slats were made. These rings were made in two parts for want of strength. The inner diameter is made to 2meters, so that it could fit someone bit taller than me. Considering the fit to the standard size plwoods of 8ft x 4ft, each rings were made in 3 parts of 120-deg included angle. Dovetail joints were used to join these. The inner rings also had the teeth to pressfit the slats. There are 51 slats which contituted the walking surface. The various design aspects of these parts are illustrtaed in the images below. </p>
+        
+        <p> <img src="images/project/outer_ring_segment.jpg" width=80% height=auto>  </p>       
+       <p><legend>Outer Ring Segment </legend></p>  
+
+        <p> <img src="images/project/out_ring_dovetail.jpg" width=80% height=auto>  </p>       
+       <p><legend>Dove-tail joint for the outer rings </legend></p>  
+
+        <p> <img src="images/project/outer_ring_assy.jpg" width=80% height=auto>  </p>       
+       <p><legend>Outer Ring Assy (1x of these rings are used for each side) </legend></p>  
+
+        <p> <img src="images/project/inner_slotted_segment.jpg" width=80% height=auto>  </p>       
+       <p><legend>The segment of the inner slotted rings </legend></p>
+
+        <p> <img src="images/project/inner_arc_joint.jpg" width=80% height=auto>  </p>       
+       <p><legend>The teeth for the press-fiting the slats and the dove-tail joints of the inner rings. </legend></p>
+
+        <p> <img src="images/project/inner_sloteed_ring.jpg" width=80% height=auto>  </p>       
+       <p><legend>Inner Ring Assembly (1x of these rings are used for each side) </legend></p>
+
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/486617feed524f958cf977542e20a626/embed?autospin=0.2&amp;autostart=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;text-align: center">
+    <a href="https://sketchfab.com/models/486617feed524f958cf977542e20a626?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">FabWheel - the WalkWorkWheel</a>
+    by <a href="https://sketchfab.com/jimseelan?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">jimseelan</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+
+
+
+<h3>Fabricating the FabWheel</h3>
+
+<p>The DXF files where exported to and taken to the Shopbot's VCarve software to generate the NC code and cut using the Shopbot. The DXF files used for cutting is available in the files section and the screenshots of those are given below for ready reference.I have used 5 sheets of 19mm plywood and 2 sheets of 20mm plywood. Only the project speific things are discussed here and the documentation of shopbot is available in my <a href="exercise07.html">Computer Controlled Machining Week Assignment.</a></p>
+
+        <p> <img src="images/project/cut_base_parts.jpg" width=90% height=auto>  </p>       
+       <p><legend>All the base parts are nested here and cut </legend></p>
+
+        <p> <img src="images/project/cut_outerrings.jpg" width=90% height=auto>  </p>       
+       <p><legend>The outer rings are cut using this DXF. Two of these sheet is required to make the 6 pieces for both sides. </legend></p>
+
+        <p> <img src="images/project/cut_innerrings.jpg" width=90% height=auto>  </p>       
+       <p><legend>The Inner rings are cut using this DXF. Two of these sheet is required to make the 6 pieces for both sides. Also note the features provided for pressfit and the test cut piece. I have done these parts on 20mm plywood, but this could also be done on the 1mm plywood as the others. </legend></p>
+
+        <p> <img src="images/project/cut_slats.jpg" width=90% height=auto>  </p>       
+       <p><legend>To reduce cutting time a separate cutting drawing is created for the slats. </legend></p>
+
+
+        <div class='embed-container'><iframe src="https://www.youtube.com/embed/SaYv3eeeUX4?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&playlist=SaYv3eeeUX4;volume=0" frameborder="0" width="560" height="315" allowfullscreen></iframe></div>
+        <p> <legend>Video (on youtube) depicting the cutting of the base parts at (video is at 7x speed).</legend> </p>  
+
+        <p> <img src="images/project/mfg/slatscut.jpg" width=90% height=auto>  </p>       
+       <p><legend>The slats cut using the shopbot. </legend></p>
+
+        <p> <img src="images/project/mfg/inner_ring_aftercut.jpg" width=90% height=auto>  </p>       
+       <p><legend>The inner ring segments are placed together for starting the assembly. </legend></p>
+
+        <p> <img src="images/project/mfg/joiningtherings2.jpg" width=90% height=auto>  </p>       
+       <p><legend>The inner ring segments and outer ring segments are aligned together. </legend></p>
+
+        <p> <img src="images/project/mfg/joiningtherings.jpg" width=90% height=auto>  </p>       
+       <p><legend>The inner ring segments and outer ring segments are joined together, using 1/4" fasteners </legend></p>
+
+        <p> <img src="images/project/mfg/ring_assy.jpg" width=90% height=auto>  </p>       
+       <p><legend>The fasteners are tightened again after making the rings stand. and these steps are also repeated for the other set of rings. Do note that these assembly steps require atleast 4 people considering the weight and size of the parts.</legend></p>
+
+        <p> <img src="images/project/mfg/assy_of_frame.jpg" width=90% height=auto>  </p>       
+       <p><legend>The base support parts are assembled, a tighter pressfit was employed for strength and durability, but this inturn resulted in applying some hevy work with the mallets to force the parts in place. </legend></p>
+
+        <p> <img src="images/project/mfg/assembled_frame.jpg" width=90% height=auto>  </p>       
+       <p><legend>The base support frame is finally assembled and it turns out to be very robust too.  </legend></p>
+
+        <p> <img src="images/project/mfg/placing_the_slats.jpg" width=90% height=auto>  <img src="images/project/mfg/assy_of_slats.jpg" width=90% height=auto>  </p>       
+       <p><legend>The alternate slats are then mounted, so that the rings are spaced rightly apart.  </legend></p>
+
+
+        <p> <img src="images/project/mfg/removable_wheel.jpg" width=90% height=auto>  </p>       
+       <p><legend>The walking surface assy could be removed from the base assembly.  </legend></p>
+
+        <p> <img src="images/project/mfg/support_wheel.jpg" width=90% height=auto>  </p>       
+       <p><legend>The support wheels are then mounted using 1/2" bolts and nuts. As the rings used to rub against the base support ply there was huge friction. Tried many options like inclining the wheels so that the rings are more centered (by rasing the sides of the wheels by adding 2 pieces of 3mm plywood as shown above) (these was later removed). But finally the solution of adding ball castors on the base side ply solved the issue, and its shown in the image below.  </legend></p>
+
+        <p> <img src="images/project/mfg/wheel_and_mark.jpg" width=90% height=auto>  </p>       
+       <p><legend>The support wheel and the casto is shown in this image. 4 such castors are put on each of the side support.  </legend></p>
+
+        <div class='embed-container'><iframe src="https://www.youtube.com/embed/nND8OCeeuYQ?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&playlist=nND8OCeeuYQ;volume=0" frameborder="0" width="560" height="315" allowfullscreen></iframe></div>
+        <p> <legend>Video (on youtube) depicting the assembly of the parts and the fun we had while testing it for the first time.</legend> </p>  
+
+<h3>Electronics Design</h3>
+    <p>On the electronics part, I wanted to sense the number of rotations and get it displayed on a mobile device.</p> <br>
+        
+        <p> <img src="images/project/schematics_eagle.jpg" width=90% height=auto>  </p>       
+       <p><legend>The Schematics created using Autodesk Eagle  </legend></p>
+
+        <p> <img src="images/project/board_eagle.jpg" width=90% height=auto>  </p>       
+       <p><legend>The board layout created using Autodesk Eagle </legend></p>
+
+        <p>For the sensing the rotations, I thought to use <a href="https://en.wikipedia.org/wiki/Reed_switch">Reed Switch</a>, and ordered one like <a href="http://www.amazon.in/3-3V-5V-Magnetic-Photocopiers-machines-Refrigerators/dp/B018VQ2H1E">this</a>.</p> <br>
+
+        <p>For the Bluetooth part I planned to use the <a href="http://www.amazon.in/Bluetooth-Transceiver-Module-TTL-Outputs-HC05/dp/B00R95Y0AK">HC-05 bluetooth module.</a></p>
+
+        <p>On the controller part, I used the ATmega328P and based my design on the <a href="https://github.com/satshas/satshakit">satshakit micro</a>. The micro design was very compact for my application, and was compactly routed. I also added a regulated power input circuit, so that a 9V battery could be used in the circuit. The eagle schematics and board files are shown in the images. Please find the list of components in the BOM attached towards the end of this page.  </p>
+
+        <p> <img src="images/project/pcb_traces_mill.png" width=90% height=auto>  </p>       
+       <p><legend>The traces PNG file to be used in modella and 1/64 mill bit  </legend></p>
+
+        <p> <img src="images/project/pcb_profilecut.png" width=90% height=auto>  </p>       
+       <p><legend>The outer profile and through holes cutting PNG file to be used in modella and 1/32 bit  </legend></p>
+
+        <p> <img src="images/project/elec/milled_pcb.jpg" width=90% height=auto>  </p>       
+       <p><legend>The milled PCB for fabwheel. Modela MDX-20 is used for milling. And for detailed process on how to get the pcb milled, please visit my <a href="exercise04.html">Electronics production</a> Documentation. Few of the traces needed to be separated  </legend></p>
+
+        <p> <img src="images/project/elec/wip_of_soldering.jpg" width=90% height=auto>  </p>       
+       <p><legend>An in progress image while stuffing the board</legend></p>
+
+        <p> <img src="images/project/elec/finished_board.jpg" width=90% height=auto>  </p>       
+       <p><legend>The powered up finished board</legend></p>
+
+        <p> <img src="images/project/elec/trying_blink.jpg" width=90% height=auto>  </p>       
+       <p><legend>Using the fabisp to load the the program, and testing by blinking an LED</legend></p>
+
+        <p> <img src="images/project/elec/trying_blink_battery.jpg" width=90% height=auto>  </p>       
+       <p><legend>Testing the board powering up using a 9W battery</legend></p>
+
+        <p> <img src="images/project/elec/elec.jpg" width=90% height=auto>  </p>       
+       <p><legend>The components for the fabwheel electonics. The main board, bluetooth module, reed sensor module, 9v battery and 9 wires with connector (3 for reed sensor, 4 for bluetooth module and 2 for the power) </legend></p>
+
+        <p> <img src="images/project/code_screen_shot.jpg" width=70% height=auto>  </p>       
+       <p><legend>The code used for detecting the reed sensor and sending via serial bluetooth </legend></p>
+
+        <p> <img src="images/project/elec/circuit_without_connectors.jpg" width=90% height=auto>  </p>       
+       <p><legend>Testing the board with the reed sensor and the bluetooth module. later the connections are made directly to the components while put into the electronic housing discussed below.</legend></p>
+
+<h3>Electronic Housing</h3>
+
+<p>I wanted the electronic housing to be a fastener free design permiting distance adjustment with the magnet. I have provisioned a lateral member in the base design to mount these and any other attachments as required. The electronic housing also wnt through multiple iterations before finalised on the design that is 3D printed.</p>
+
+        <p> <img src="images/project/sk8.JPG" width=90% height=auto>  </p>       
+       <p><legend>The larger version of the housing, which was later redesigned.</legend></p>
+
+        <p> <img src="images/project/electronic_housing1.jpg" width=90% height=auto>  </p>       
+       <p><legend>The final version of the housing, that was 3D printed</legend></p>
+
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/9d792f0b6a954660bb23f9da95a9e23b/embed?autospin=0.2&amp;autostart=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center">
+    <a href="https://sketchfab.com/models/9d792f0b6a954660bb23f9da95a9e23b?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Electronic Casing for fabwheel</a>
+    by <a href="https://sketchfab.com/jimseelan?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">jimseelan</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+
+        <p> <img src="images/project/electronic_housing_rendered.jpg" width=90% height=auto>  </p>       
+       <p><legend>The rendered view of the electronic housing that could be mounted on the end lateral on the base support.</legend></p>
+
+        <p> <img src="images/project/meshmixer_support.jpg" width=90% height=auto>  </p>       
+       <p><legend>Autodesk meshmixer was used to create the internal supports for 3D printing.</legend></p>
+
+        <p> <img src="images/project/3dprinting_casing.jpg" width=90% height=auto>  </p>       
+       <p><legend>3D printing in progress on the Ultimaker 2. For details on the usage of the 3D printer please visit the documentation on the <a href="exercise05.html"> 3D-Printing week.</a></legend></p>
+
+        <p> <img src="images/project/mfg/electronichousingassy.jpg" width=90% height=auto>  </p>       
+       <p><legend>The electronic housing could be assembled by inserting to the end laterals provided in the base assembly. This housing is also movable laterally. No fasteners were used, still it gave a good fit. Anyway I have put some holes for any one wanting a more robust attachment which may fix its position after alignment with the magnets.</legend></p>
+
+<h3>Companion App for FabWheel</h3>
+<p>MIT's Appinventor is used to create the companion app for the fabwheel. My plan was to display the number of rotations of the fabwheel in the app. </p>
+
+        <p> <img src="images/project/appinventor_design.jpg" width=90% height=auto>  </p>       
+       <p><legend>Readability and visual indication of rotation was considered the prime focus during the app design.</legend></p>
+
+        <p> <img src="images/project/appinventor_blocks.jpg" width=90% height=auto>  </p>       
+       <p><legend>The logic was to get the number of rotation displayed. Blocks for bluetooth connectivity was used. Also a red line is made for progress in the energy canvas. The main trigger was the clock object that gets and displays the data.</legend></p>
+
+        <p> <img src="images/project/fabwheelapp.gif" width=50% height=auto>  </p>       
+       <p><legend>This GIF is created from the screen capture of the app running on my Android phone.</legend></p>
+
+<h3>Conclusion and future plans</h3>
+<p>This project has enabled me to showcase the various skills learned and practiced duirng the fabacademy course, and I was very happy when everybody had fun walking on the fabwheel, and it was a crowd puller and curiosity generator during many of the group visits in our fablab. I plan to take this to my work place and gradually later continue to add more module including a small power generator, RGB light strips, integration to computer games, gamified leaderbords etc. </p>
+
+            <p>Poster and the video illustrating the Finished part for the final presentation are available in <a href="project04.html">Final Results</a> page.</p>
+<p>The various files created as part of this project is available to download here, (the link opens in a new window)</p>
+      <a href="images\project\projectfiles\" target="_blank">
+	<button type="button" class="btn btn-primary btn-lg">Download the files</button>
+	</a>
+
+
+
+
+    
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+      
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

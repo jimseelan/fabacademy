@@ -1,0 +1,343 @@
+jim@jim-ThinkPad-T420:~$ sudo apt install avrdude gcc-avr avr-libc make
+[sudo] password for jim: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+make is already the newest version (4.1-6).
+make set to manually installed.
+The following additional packages will be installed:
+  binutils-avr libftdi1
+Suggested packages:
+  avrdude-doc task-c-devel gcc-doc
+The following NEW packages will be installed:
+  avr-libc avrdude binutils-avr gcc-avr libftdi1
+0 upgraded, 5 newly installed, 0 to remove and 33 not upgraded.
+Need to get 18.8 MB of archives.
+After this operation, 113 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 libftdi1 amd64 0.20-4build1 [15.2 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 binutils-avr amd64 2.25+Atmel3.5.0-2 [1,425 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 gcc-avr amd64 1:4.9.2+Atmel3.5.0-1 [12.7 MB]
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 avr-libc all 1:1.8.0+Atmel3.5.0-1 [4,378 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 avrdude amd64 6.2-5 [291 kB]
+Fetched 18.8 MB in 19s (979 kB/s)                                              
+Selecting previously unselected package libftdi1:amd64.
+(Reading database ... 225620 files and directories currently installed.)
+Preparing to unpack .../libftdi1_0.20-4build1_amd64.deb ...
+Unpacking libftdi1:amd64 (0.20-4build1) ...
+Selecting previously unselected package binutils-avr.
+Preparing to unpack .../binutils-avr_2.25+Atmel3.5.0-2_amd64.deb ...
+Unpacking binutils-avr (2.25+Atmel3.5.0-2) ...
+Selecting previously unselected package gcc-avr.
+Preparing to unpack .../gcc-avr_1%3a4.9.2+Atmel3.5.0-1_amd64.deb ...
+Unpacking gcc-avr (1:4.9.2+Atmel3.5.0-1) ...
+Selecting previously unselected package avr-libc.
+Preparing to unpack .../avr-libc_1%3a1.8.0+Atmel3.5.0-1_all.deb ...
+Unpacking avr-libc (1:1.8.0+Atmel3.5.0-1) ...
+Selecting previously unselected package avrdude.
+Preparing to unpack .../avrdude_6.2-5_amd64.deb ...
+Unpacking avrdude (6.2-5) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libftdi1:amd64 (0.20-4build1) ...
+Setting up binutils-avr (2.25+Atmel3.5.0-2) ...
+Setting up gcc-avr (1:4.9.2+Atmel3.5.0-1) ...
+Setting up avr-libc (1:1.8.0+Atmel3.5.0-1) ...
+Setting up avrdude (6.2-5) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+jim@jim-ThinkPad-T420:~$ sudo apt-get update
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://security.ubuntu.com/ubuntu xenial-security InRelease   
+Hit:3 http://in.archive.ubuntu.com/ubuntu xenial InRelease          
+Hit:4 http://ppa.launchpad.net/embrosyn/cinnamon/ubuntu xenial InRelease
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release              
+Hit:6 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease      
+Hit:7 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease
+Get:9 https://download.01.org/gfx/ubuntu/16.04/main xenial InRelease [3,651 B]
+Ign:9 https://download.01.org/gfx/ubuntu/16.04/main xenial InRelease
+Fetched 3,651 B in 3s (1,144 B/s)
+Reading package lists... Done
+W: GPG error: https://download.01.org/gfx/ubuntu/16.04/main xenial InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 56A3DEF863961D39
+W: The repository 'https://download.01.org/gfx/ubuntu/16.04/main xenial InRelease' is not signed.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+jim@jim-ThinkPad-T420:~$ sudo apt-get upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  cinnamon cinnamon-common cinnamon-screensaver cinnamon-settings-daemon cjs
+  gnome-software gnome-software-common linux-generic linux-headers-generic
+  linux-image-generic snapd ubuntu-core-launcher ubuntu-software
+The following packages will be upgraded:
+  bind9-host dnsutils gir1.2-javascriptcoregtk-4.0 gir1.2-webkit2-4.0
+  libavcodec-ffmpeg56 libavformat-ffmpeg56 libavutil-ffmpeg54 libbind9-140
+  libdns-export162 libdns162 libgc1c2 libisc-export160 libisc160 libisccc140
+  libisccfg140 libjavascriptcoregtk-4.0-18 liblwres141 libswresample-ffmpeg1
+  libwebkit2gtk-4.0-37 libwebkit2gtk-4.0-37-gtk2
+20 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+Need to get 29.7 MB of archives.
+After this operation, 65.5 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [153 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [665 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 bind9-host amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [38.4 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 dnsutils amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [88.9 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [214 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [877 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisccc140 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [16.2 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisccfg140 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [40.4 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblwres141 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [33.5 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libbind9-140 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [23.6 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwebkit2gtk-4.0-37-gtk2 amd64 2.14.5-0ubuntu0.16.04.1 [8,316 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwebkit2gtk-4.0-37 amd64 2.14.5-0ubuntu0.16.04.1 [10.2 MB]
+Get:13 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libjavascriptcoregtk-4.0-18 amd64 2.14.5-0ubuntu0.16.04.1 [3,710 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gir1.2-webkit2-4.0 amd64 2.14.5-0ubuntu0.16.04.1 [64.2 kB]
+Get:15 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gir1.2-javascriptcoregtk-4.0 amd64 2.14.5-0ubuntu0.16.04.1 [21.5 kB]
+Get:16 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libswresample-ffmpeg1 amd64 7:2.8.11-0ubuntu0.16.04.1 [51.7 kB]
+Get:17 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libavformat-ffmpeg56 amd64 7:2.8.11-0ubuntu0.16.04.1 [807 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libavcodec-ffmpeg56 amd64 7:2.8.11-0ubuntu0.16.04.1 [4,081 kB]
+Get:19 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libavutil-ffmpeg54 amd64 7:2.8.11-0ubuntu0.16.04.1 [166 kB]
+Get:20 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgc1c2 amd64 1:7.4.2-7.3ubuntu0.1 [82.1 kB]
+Fetched 29.7 MB in 25s (1,154 kB/s)                                            
+(Reading database ... 228866 files and directories currently installed.)
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../bind9-host_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking bind9-host (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../dnsutils_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking dnsutils (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libisc160_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libisc160:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libdns162_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libdns162:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libisccc140_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libisccc140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libisccfg140_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libisccfg140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../liblwres141_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking liblwres141:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libbind9-140_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libbind9-140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) over (1:9.10.3.dfsg.P4-8ubuntu1.4) ...
+Preparing to unpack .../libwebkit2gtk-4.0-37-gtk2_2.14.5-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libwebkit2gtk-4.0-37-gtk2:amd64 (2.14.5-0ubuntu0.16.04.1) over (2.14.3-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libwebkit2gtk-4.0-37_2.14.5-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libwebkit2gtk-4.0-37:amd64 (2.14.5-0ubuntu0.16.04.1) over (2.14.3-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libjavascriptcoregtk-4.0-18_2.14.5-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libjavascriptcoregtk-4.0-18:amd64 (2.14.5-0ubuntu0.16.04.1) over (2.14.3-0ubuntu0.16.04.1) ...
+Preparing to unpack .../gir1.2-webkit2-4.0_2.14.5-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking gir1.2-webkit2-4.0:amd64 (2.14.5-0ubuntu0.16.04.1) over (2.14.3-0ubuntu0.16.04.1) ...
+Preparing to unpack .../gir1.2-javascriptcoregtk-4.0_2.14.5-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking gir1.2-javascriptcoregtk-4.0:amd64 (2.14.5-0ubuntu0.16.04.1) over (2.14.3-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libswresample-ffmpeg1_7%3a2.8.11-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libswresample-ffmpeg1:amd64 (7:2.8.11-0ubuntu0.16.04.1) over (7:2.8.10-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libavformat-ffmpeg56_7%3a2.8.11-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libavformat-ffmpeg56:amd64 (7:2.8.11-0ubuntu0.16.04.1) over (7:2.8.10-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libavcodec-ffmpeg56_7%3a2.8.11-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libavcodec-ffmpeg56:amd64 (7:2.8.11-0ubuntu0.16.04.1) over (7:2.8.10-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libavutil-ffmpeg54_7%3a2.8.11-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libavutil-ffmpeg54:amd64 (7:2.8.11-0ubuntu0.16.04.1) over (7:2.8.10-0ubuntu0.16.04.1) ...
+Preparing to unpack .../libgc1c2_1%3a7.4.2-7.3ubuntu0.1_amd64.deb ...
+Unpacking libgc1c2:amd64 (1:7.4.2-7.3ubuntu0.1) over (1:7.4.2-7.3) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libisc160:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libdns162:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libisccc140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libisccfg140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libbind9-140:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up liblwres141:amd64 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up bind9-host (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up dnsutils (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libjavascriptcoregtk-4.0-18:amd64 (2.14.5-0ubuntu0.16.04.1) ...
+Setting up libwebkit2gtk-4.0-37:amd64 (2.14.5-0ubuntu0.16.04.1) ...
+Setting up libwebkit2gtk-4.0-37-gtk2:amd64 (2.14.5-0ubuntu0.16.04.1) ...
+Setting up gir1.2-javascriptcoregtk-4.0:amd64 (2.14.5-0ubuntu0.16.04.1) ...
+Setting up gir1.2-webkit2-4.0:amd64 (2.14.5-0ubuntu0.16.04.1) ...
+Setting up libavutil-ffmpeg54:amd64 (7:2.8.11-0ubuntu0.16.04.1) ...
+Setting up libswresample-ffmpeg1:amd64 (7:2.8.11-0ubuntu0.16.04.1) ...
+Setting up libavcodec-ffmpeg56:amd64 (7:2.8.11-0ubuntu0.16.04.1) ...
+Setting up libavformat-ffmpeg56:amd64 (7:2.8.11-0ubuntu0.16.04.1) ...
+Setting up libgc1c2:amd64 (1:7.4.2-7.3ubuntu0.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+jim@jim-ThinkPad-T420:~$ cd Downloads/fts_firmware_bdm_v1/
+jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1$ make
+avr-gcc -mmcu=attiny45 -Wall -DF_CPU=16500000UL -I. -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -Iusbdrv -c main.c -o main.o
+main.c:109:13: warning: always_inline function might not be inlinable [-Wattributes]
+ static void delay ( void )
+             ^
+avr-gcc -mmcu=attiny45 -Wall -DF_CPU=16500000UL -I. -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -Iusbdrv -c usbdrv/usbdrv.c -o usbdrv/usbdrv.o
+avr-gcc -mmcu=attiny45 -Wall -DF_CPU=16500000UL -I. -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -Iusbdrv -c usbdrv/oddebug.c -o usbdrv/oddebug.o
+avr-gcc -x assembler-with-cpp -mmcu=attiny45 -Wall -DF_CPU=16500000UL -I. -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -Iusbdrv -c usbdrv/usbdrvasm.S -o usbdrv/usbdrvasm.o
+avr-gcc -mmcu=attiny45 -o fts_firmware.elf main.o usbdrv/usbdrv.o usbdrv/oddebug.o usbdrv/usbdrvasm.o
+avr-size -C --mcu=attiny45 fts_firmware.elf
+AVR Memory Usage
+----------------
+Device: attiny45
+
+Program:    2474 bytes (60.4% Full)
+(.text + .data + .bootloader)
+
+Data:         75 bytes (29.3% Full)
+(.data + .bss + .noinit)
+
+
+avr-objcopy -j .text -j .data -O ihex fts_firmware.elf fts_firmware.hex
+jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1$ make flash
+avrdude -p attiny45 -c usbtiny -P usb -e \
+	-U flash:w:fts_firmware.hex
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9206 (probably t45)
+avrdude: erasing chip
+avrdude: reading input file "fts_firmware.hex"
+avrdude: input file fts_firmware.hex auto detected as Intel Hex
+avrdude: writing flash (2474 bytes):
+
+Writing | ################################################## | 100% 4.02s
+
+avrdude: 2474 bytes of flash written
+avrdude: verifying flash memory against fts_firmware.hex:
+avrdude: load data flash data from input file fts_firmware.hex:
+avrdude: input file fts_firmware.hex auto detected as Intel Hex
+avrdude: input file fts_firmware.hex contains 2474 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 7.46s
+
+avrdude: verifying ...
+avrdude: 2474 bytes of flash verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:62)
+
+avrdude done.  Thank you.
+
+jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1$ make fuses
+avrdude -p attiny45 -c usbtiny -P usb \
+	-U lfuse:w:0xE1:m -U hfuse:w:0xDD:m \
+	-U efuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9206 (probably t45)
+avrdude: reading input file "0xE1"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.01s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xE1:
+avrdude: load data lfuse data from input file 0xE1:
+avrdude: input file 0xE1 contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xDD"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.01s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDD:
+avrdude: load data hfuse data from input file 0xDD:
+avrdude: input file 0xDD contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing efuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of efuse written
+avrdude: verifying efuse memory against 0xFF:
+avrdude: load data efuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip efuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of efuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DD, L:E1)
+
+avrdude done.  Thank you.
+
+jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1$ make rstdisbl
+avrdude -p attiny45 -c usbtiny -P usb \
+	-U lfuse:w:0xE1:m -U hfuse:w:0x5D:m \
+	-U efuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9206 (probably t45)
+avrdude: reading input file "0xE1"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xE1:
+avrdude: load data lfuse data from input file 0xE1:
+avrdude: input file 0xE1 contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0x5D"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.01s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0x5D:
+avrdude: load data hfuse data from input file 0x5D:
+avrdude: input file 0x5D contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing efuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of efuse written
+avrdude: verifying efuse memory against 0xFF:
+avrdude: load data efuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip efuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of efuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:5D, L:E1)
+
+avrdude done.  Thank you.
+
+jim@jim-ThinkPad-T420:~/Downloads/fts_firmware_bdm_v1$ 
